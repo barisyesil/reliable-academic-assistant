@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #343541; /* Koyu tema arka planı */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 800px;
+  height: 90vh;
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.chat-header {
+  background-color: #202123;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-badge {
+  font-size: 0.8rem;
+  background-color: #444654;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f7f7f8;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.message-wrapper.user {
+  justify-content: flex-end;
+}
+
+.message-wrapper.ai {
+  justify-content: flex-start;
+}
+
+.message {
+  max-width: 75%;
+  padding: 15px;
+  border-radius: 8px;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.user .message {
+  background-color: #10a37f;
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.ai .message {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  color: #333;
+  border-bottom-left-radius: 0;
+}
+
+.loading {
+  font-style: italic;
+  color: #888 !important;
+}
+
+.sources {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.source-badge {
+  display: inline-block;
+  background-color: #e2e8f0;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.input-area {
+  display: flex;
+  padding: 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-area input:focus {
+  border-color: #10a37f;
+}
+
+.input-area button {
+  padding: 0 25px;
+  margin-left: 10px;
+  background-color: #10a37f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.input-area button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.input-area button:hover:not(:disabled) {
+  background-color: #0d8a6a;
+}

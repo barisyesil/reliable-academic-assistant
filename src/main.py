@@ -4,60 +4,45 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
-# Makine öğrenmesi modüllerimiz
 from langchain_groq import ChatGroq
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
-from langchain_classic.chains import RetrievalQA
+from langchain_classic.chains import ConversationalRetrievalChain
 
-from src.schemas import ChatRequest, ChatResponse, SourceSchema
+from schemas import ChatRequest, ChatResponse, SourceSchema
 
 load_dotenv()
 
-# Uygulama genelinde yaşayacak yapay zeka motorumuz
 ai_engine = {}
+# API'nin hafıza deposu (Gerçek senaryoda bu Redis veya PostgreSQL'de tutulur)
+chat_histories = {} 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """
-    Sunucu başlarken makine öğrenmesi modellerini hafızaya alır.
-    """
-    print("--- Makine Öğrenmesi Modelleri Yükleniyor ---")
+    print("--- Yapay Zeka Motoru ve Hafıza Modülleri Yükleniyor ---")
     try:
         embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-        vector_store = Chroma(persist_directory="./db", embedding_function=embeddings)
         
-        llm = ChatGroq(
+        # Veritabanını doğrudan engine içine alıyoruz ki endpoint'te manuel arama yapabilelim
+        ai_engine["vector_store"] = Chroma(persist_directory="./db", embedding_function=embeddings)
+        
+        ai_engine["llm"] = ChatGroq(
             groq_api_key=os.getenv("GROQ_API_KEY"),
             model_name="llama-3.1-8b-instant",
             temperature=0
-        )
-        
-        ai_engine["qa_chain"] = RetrievalQA.from_chain_type(
-            llm=llm,
-            chain_type="stuff",
-            retriever=vector_store.as_retriever(search_kwargs={"k": 3}),
-            return_source_documents=True
         )
         print("--- Sistem Başarıyla Hazırlandı ---")
     except Exception as e:
         print(f"Model yükleme hatası: {e}")
     
     yield
-    
-    # Sunucu kapanırken belleği temizler
     ai_engine.clear()
+    chat_histories.clear()
+app = FastAPI(title="ETÜ Akademik Asistan API - Hafızalı & Yönlendiricili Sürüm", lifespan=lifespan)
 
-app = FastAPI(
-    title="ETÜ Akademik Asistan API",
-    version="1.0.0",
-    lifespan=lifespan
-)
-
-# Frontend ile haberleşebilmek için CORS ayarları (Güvenlik)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # Canlı ortama çıkarken buraya spesifik domainler eklenecek
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -65,26 +50,91 @@ app.add_middleware(
 
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest):
-    """
-    Kullanıcıdan gelen soruları yapay zeka motoruna iletir ve formatlayıp döndürür.
-    """
-    if "qa_chain" not in ai_engine:
+    if "llm" not in ai_engine or "vector_store" not in ai_engine:
         raise HTTPException(status_code=503, detail="Yapay zeka servisi şu an kullanılamıyor.")
     
-    try:
-        # Soruyu modele gönderiyoruz
-        response = ai_engine["qa_chain"].invoke({"query": request.query})
+    session_id = request.session_id
+    query = request.query
+    
+    if session_id not in chat_histories:
+        chat_histories[session_id] = []
         
-        # Sadece sayfa numaralarını frontend'e iletmek üzere formatlıyoruz
-        source_list = []
-        for doc in response.get('source_documents', []):
-            page = str(doc.metadata.get('page', 'Bilinmiyor'))
-            source_list.append(SourceSchema(page=page))
+    window_history = chat_histories[session_id][-3:]
+    router_llm = ai_engine["llm"]
+    vector_store = ai_engine["vector_store"]
+    
+    try:
+        # --- 1. ADIM: NİYET ANALİZİ (ROUTER) - ENGLISH PROMPT ---
+        intent_prompt = f"""You are an intelligent router. Classify the user's LATEST input strictly as 'GENERAL' or 'ACADEMIC'.
+GENERAL: Small talk, greetings, asking about your capabilities, meaningless words (e.g., "string", "test"), or continuing a casual chat.
+ACADEMIC: Specific questions about university rules, regulations, passing grades, courses, internships, or institutional knowledge.
+
+User's Latest Input: {query}
+Category (Only output GENERAL or ACADEMIC):"""
+        
+        intent = router_llm.invoke(intent_prompt).content.strip().upper()
+        
+        # Geçmişi düzenle
+        history_text = "\n".join([f"User: {h[0]}\nAssistant: {h[1]}" for h in window_history])
+        if not history_text:
+            history_text = "No previous history."
+
+        # --- 2. ADIM: İŞLEME VE CEVAP ÜRETİMİ (ENGLISH MASTER PROMPTS) ---
+        if "GENERAL" in intent:
+            print("[ROUTER] Genel sohbet algılandı.")
             
-        return ChatResponse(
-            answer=response['result'],
-            sources=source_list
-        )
+            chat_prompt = f"""System: You are a helpful, friendly academic assistant. 
+Your absolute priority is to respond ONLY to the 'LATEST USER MESSAGE'. 
+Do NOT re-answer or repeat previous responses from the 'CHAT HISTORY'. 
+Use the 'CHAT HISTORY' strictly for context if the user's latest message refers to something discussed previously (like their name or status).
+Always respond in the language the user is speaking.
+
+[CHAT HISTORY]
+{history_text}
+
+[LATEST USER MESSAGE]
+{query}
+
+Assistant:"""
+            
+            ai_answer = router_llm.invoke(chat_prompt).content
+            sources = []
+            
+        else:
+            print("[ROUTER] Akademik soru algılandı. Gelişmiş Context Entegrasyonu yapılıyor.")
+            
+            # Manuel RAG Araması
+            docs = vector_store.similarity_search(query, k=3)
+            context_text = "\n\n".join([f"--- Page {doc.metadata.get('page', '?')} ---\n{doc.page_content}" for doc in docs])
+            
+            # MASTER PROMPT IN ENGLISH
+            academic_prompt = f"""System: You are a reliable, strictly factual Academic Assistant.
+Your absolute priority is to answer the 'LATEST USER MESSAGE'. Do NOT re-answer previous questions from the 'CHAT HISTORY'.
+
+RULES:
+1. Answer the 'LATEST USER MESSAGE' using ONLY the facts provided in the 'OFFICIAL REGULATIONS'. Do not hallucinate.
+2. Read the 'CHAT HISTORY' ONLY to understand the user's personal context (e.g., their current semester, department, name).
+3. If the user asks a personal academic question (e.g., "when should I do my internship?"), apply the rules from the 'OFFICIAL REGULATIONS' to their specific situation found in the 'CHAT HISTORY'.
+4. If the 'OFFICIAL REGULATIONS' do not contain the answer to the latest message, clearly state: "I could not find information regarding this in the official regulations."
+5. Always answer in the same language as the 'LATEST USER MESSAGE'.
+
+[CHAT HISTORY (User's Context)]
+{history_text}
+
+[OFFICIAL REGULATIONS (Knowledge Base)]
+{context_text}
+
+[LATEST USER MESSAGE]
+{query}
+
+Assistant:"""
+            
+            ai_answer = router_llm.invoke(academic_prompt).content
+            sources = [SourceSchema(page=str(doc.metadata.get('page', 'Bilinmiyor'))) for doc in docs]
+
+        # Genel hafızayı güncelle
+        chat_histories[session_id].append((query, ai_answer))
+        return ChatResponse(answer=ai_answer, sources=sources)
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
