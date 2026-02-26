@@ -1,7 +1,14 @@
+fastapi
+uvicorn
+pydantic
 langchain
-langchain-community
-chromadb
+langchain-core
+langchain-groq
+langchain-huggingface
+langchain-chroma
+langchain-experimental
 pypdf
 sentence-transformers
 python-dotenv
-langchain-groq
+brotli
+brotlicffi
