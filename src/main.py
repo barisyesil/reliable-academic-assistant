@@ -7,9 +7,8 @@ from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
-from langchain_classic.chains import ConversationalRetrievalChain
 
-from schemas import ChatRequest, ChatResponse, SourceSchema
+from src.schemas import ChatRequest, ChatResponse, SourceSchema
 
 load_dotenv()
 
@@ -38,6 +37,7 @@ async def lifespan(app: FastAPI):
     yield
     ai_engine.clear()
     chat_histories.clear()
+
 app = FastAPI(title="ETÜ Akademik Asistan API - Hafızalı & Yönlendiricili Sürüm", lifespan=lifespan)
 
 app.add_middleware(
@@ -104,7 +104,13 @@ Assistant:"""
             print("[ROUTER] Akademik soru algılandı. Gelişmiş Context Entegrasyonu yapılıyor.")
             
             # Manuel RAG Araması
-            docs = vector_store.similarity_search(query, k=3)
+            # MMR (Maksimum Marjinal Uygunluk) Araması
+            # fetch_k=10 (arka planda 10 tane bul), k=3 (aralarından en çeşitli 3'ünü seç)
+            # ChromaDB'de similarity_search (Benzerlik Araması) yerine max_marginal_relevance_search 
+            # (MMR - Maksimum Marjinal Uygunluk) kullanacağız.
+            #  MMR arka planda 10 tane benzer kaynak bulur, 
+            # sonra bunların içinden "birbirine en az benzeyen, en çeşitli 3 kaynağı" seçip sana getirir.
+            docs = vector_store.max_marginal_relevance_search(query, k=3, fetch_k=10, lambda_mult=0.5)
             context_text = "\n\n".join([f"--- Page {doc.metadata.get('page', '?')} ---\n{doc.page_content}" for doc in docs])
             
             # MASTER PROMPT IN ENGLISH
@@ -130,11 +136,19 @@ RULES:
 Assistant:"""
             
             ai_answer = router_llm.invoke(academic_prompt).content
-            sources = [SourceSchema(page=str(doc.metadata.get('page', 'Bilinmiyor'))) for doc in docs]
+            
+            # İŞTE 500 HATASINI ÇÖZEN VE ALINTIYI EKLEYEN KISIM
+            sources = []
+            for doc in docs:
+                sources.append(SourceSchema(
+                    page=str(doc.metadata.get('page', 'Bilinmiyor')),
+                    content=doc.page_content  # PDF'ten alınan orijinal metin bloğu
+                ))
 
         # Genel hafızayı güncelle
         chat_histories[session_id].append((query, ai_answer))
         return ChatResponse(answer=ai_answer, sources=sources)
         
     except Exception as e:
+        print(f"API Hatası: {str(e)}") # Hatayı terminalde daha net görmek için ekledik
         raise HTTPException(status_code=500, detail=str(e))

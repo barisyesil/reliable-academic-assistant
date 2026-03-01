@@ -3,7 +3,8 @@ import json
 import hashlib
 from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
-from langchain_experimental.text_splitter import SemanticChunker
+# SemanticChunker silindi, yerine LangChain'in kararlı ana paketinden Recursive eklendi
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
@@ -39,23 +40,27 @@ def save_processed_hashes(hashes):
 def process_academic_documents(data_dir="data"):
     """
     Klasördeki dosyaları tarar, sadece yeni veya değişmiş olanları bulur,
-    anlamsal (semantic) olarak parçalar ve vektör veritabanına EKLER.
+    deterministik olarak parçalar ve vektör veritabanına EKLER.
     """
     print("--- Veri Hattı (Ingestion Pipeline) Başlatılıyor ---")
     
-    # 1. Embedding Modeli ve Semantic Chunker
-    # Semantic Chunker, cümlelerin anlamsal bütünlüğünü bozmadan ayırmak için embeddings kullanır
+    # 1. Embedding Modeli ve Deterministik Chunker
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-    text_splitter = SemanticChunker(embeddings)
     
-    # 2. Veritabanı Bağlantısı (Üzerine yazmak yerine mevcut olanı çağırıyoruz)
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=1000,
+        chunk_overlap=200,
+        separators=["\n\n", "\n", ".", " "]
+    )
+    
+    # 2. Veritabanı Bağlantısı
     vector_db = Chroma(persist_directory="./db", embedding_function=embeddings)
     
     processed_hashes = load_processed_hashes()
     new_hashes = processed_hashes.copy()
     files_to_process = []
     
-    # 3. Klasör Taraması ve Hash Kontrolü (Incremental Logic)
+    # 3. Klasör Taraması ve Hash Kontrolü
     if not os.path.exists(data_dir):
         os.makedirs(data_dir)
         
@@ -64,7 +69,7 @@ def process_academic_documents(data_dir="data"):
             filepath = os.path.join(data_dir, filename)
             file_hash = get_file_hash(filepath)
             
-            # Eğer dosya daha önce işlenmemişse VEYA içeriği (hash değeri) değişmişse:
+            # Eğer dosya daha önce işlenmemişse VEYA içeriği değişmişse:
             if filepath not in processed_hashes or processed_hashes[filepath] != file_hash:
                 print(f"[*] Yeni/Değişen dosya tespit edildi: {filename}")
                 files_to_process.append((filepath, file_hash))
@@ -81,13 +86,10 @@ def process_academic_documents(data_dir="data"):
         loader = PyPDFLoader(filepath)
         documents = loader.load()
         
-        print(f"--- Anlamsal (Semantic) Parçalama Uygulanıyor ---")
+        print(f"--- Deterministik Parçalama Uygulanıyor ---")
         chunks = text_splitter.split_documents(documents)
         
-        # from_documents yerine add_documents kullanıyoruz (Veritabanını sıfırlamamak için)
         vector_db.add_documents(chunks) 
-        
-        # İşlem başarılı olunca yeni hash değerini kaydediyoruz
         new_hashes[filepath] = file_hash
         
     save_processed_hashes(new_hashes)

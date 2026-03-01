@@ -72,6 +72,33 @@ body {
   line-height: 1.5;
   font-size: 1rem;
 }
+/* Markdown İçerik Stilleri */
+.message p {
+  margin-bottom: 12px;
+}
+
+.message p:last-child {
+  margin-bottom: 0;
+}
+
+.message ul, .message ol {
+  margin-left: 24px;
+  margin-bottom: 12px;
+}
+
+.message li {
+  margin-bottom: 6px;
+}
+
+.message strong {
+  color: inherit;
+  font-weight: 600;
+}
+
+/* AI cevaplarındaki listeler biraz daha şık dursun */
+.ai .message ul li {
+  list-style-type: disc;
+}
 
 .user .message {
   background-color: #10a37f;
@@ -147,4 +174,40 @@ body {
 
 .input-area button:hover:not(:disabled) {
   background-color: #0d8a6a;
+}
+.sources-section {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.sources-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.source-item {
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.source-item summary {
+  color: #10a37f;
+  font-weight: 500;
+  outline: none;
+}
+
+.quote-box {
+  background-color: #f9f9f9;
+  border-left: 3px solid #10a37f;
+  padding: 8px 12px;
+  margin-top: 5px;
+  border-radius: 4px;
+  color: #555;
+  font-style: italic;
+  font-size: 0.8rem;
+  line-height: 1.4;
 }
