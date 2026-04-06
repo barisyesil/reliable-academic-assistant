@@ -72,10 +72,10 @@ function App() {
               {/* Eğer kaynak varsa şık bir rozet olarak göster */}
               {msg.sender === 'ai' && msg.sources && msg.sources.length > 0 && (
               <div className="sources-section">
-                <p className="sources-title">Dayanak Metinler:</p>
+                <p className="sources-title">Sources:</p>
                 {msg.sources.map((src, i) => (
                   <details key={i} className="source-item">
-                    <summary>Sayfa {src.page} - Metni Gör</summary>
+                    <summary>Page {src.page} - View Content</summary>
                     <div className="quote-box">
                       <blockquote>"{src.content}"</blockquote>
                     </div>

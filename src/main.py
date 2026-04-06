@@ -27,7 +27,7 @@ async def lifespan(app: FastAPI):
         
         ai_engine["llm"] = ChatGroq(
             groq_api_key=os.getenv("GROQ_API_KEY"),
-            model_name="llama-3.1-8b-instant",
+            model_name="llama-3.3-70b-versatile",
             temperature=0
         )
         print("--- Sistem Başarıyla Hazırlandı ---")
@@ -38,7 +38,7 @@ async def lifespan(app: FastAPI):
     ai_engine.clear()
     chat_histories.clear()
 
-app = FastAPI(title="ETÜ Akademik Asistan API - Hafızalı & Yönlendiricili Sürüm", lifespan=lifespan)
+app = FastAPI(title="ESTÜ Akademik Asistan API - Hafızalı & Yönlendiricili Sürüm", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -110,7 +110,7 @@ Assistant:"""
             # (MMR - Maksimum Marjinal Uygunluk) kullanacağız.
             #  MMR arka planda 10 tane benzer kaynak bulur, 
             # sonra bunların içinden "birbirine en az benzeyen, en çeşitli 3 kaynağı" seçip sana getirir.
-            docs = vector_store.max_marginal_relevance_search(query, k=3, fetch_k=10, lambda_mult=0.5)
+            docs = vector_store.max_marginal_relevance_search(query, k=6, fetch_k=10, lambda_mult=0.5)
             context_text = "\n\n".join([f"--- Page {doc.metadata.get('page', '?')} ---\n{doc.page_content}" for doc in docs])
             
             # MASTER PROMPT IN ENGLISH
@@ -137,7 +137,7 @@ Assistant:"""
             
             ai_answer = router_llm.invoke(academic_prompt).content
             
-            # İŞTE 500 HATASINI ÇÖZEN VE ALINTIYI EKLEYEN KISIM
+            
             sources = []
             for doc in docs:
                 sources.append(SourceSchema(
