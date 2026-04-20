@@ -1,0 +1,78 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-syne: "Syne", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Temaya göre değişen dinamik renkler */
+  --color-bg-main: var(--bg-main);
+  --color-bg-side: var(--bg-side);
+  --color-bg-card: var(--bg-card);
+  --color-border-subtle: var(--border-subtle);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+
+  /* Sabit Marka Renkleri */
+  --color-estu-red: #D32F2F;
+  --color-estu-red-hover: #B71C1C;
+  --color-estu-red-light: #EF5350;
+
+  --animate-fade-in: fade-in 0.3s ease forwards;
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* --- TEMA DEĞİŞKENLERİ --- */
+:root {
+  --bg-main: #f9f9f9;
+  --bg-side: #ffffff;
+  --bg-card: #f0f0f0;
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --text-main: #1a1a1a;
+  --text-muted: rgba(0, 0, 0, 0.5);
+}
+
+.dark {
+  --bg-main: #111111;
+  --bg-side: #141414;
+  --bg-card: #1a1a1a;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.5);
+}
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    background: var(--bg-main);
+    color: var(--text-main);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+}
+/* Scrollbar ve diğer layer utilities aynı kalabilir, 
+   ancak thumb rengini rgba(var(--text-main), 0.1) gibi yapabilirsin. */
+
+@layer utilities {
+  /* Scrollbar Stilleri */
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
+
+  /* Yazma Animasyonu ve Diğerleri */
+  @keyframes bounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-5px); }
+  }
+
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.4);
+    cursor: pointer;
+  }
+}

@@ -3,7 +3,9 @@ from typing import List
 
 class SourceSchema(BaseModel):
     page: str
-    content: str  # Bu satır çok kritik!
+    content: str
+    category: str = "genel"
+    document_name: str = "Bilinmiyor"
 
 class ChatRequest(BaseModel):
     session_id: str = "default_session"
