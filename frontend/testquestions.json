@@ -1,0 +1,949 @@
+{
+  "metadata": {
+    "university": "Eskişehir Teknik Üniversitesi (ESTÜ)",
+    "project": "Academic Assistant",
+    "description": "ESTÜ akademik mevzuatından oluşturulan RAG sistemi test ve benchmark veri seti",
+    "total_questions": 100,
+    "version": "1.0",
+    "question_types": [
+      "factual",
+      "reasoning",
+      "multi_hop",
+      "edge_case",
+      "comparison"
+    ],
+    "difficulty_levels": [
+      "easy",
+      "medium",
+      "hard"
+    ],
+    "source_documents": [
+      "Azami Süre Sonunda Mezun Olamayan Öğrencilere Verilen Ek Sınav Esasları",
+      "Ortak Dersler Uygulama Usul ve Esasları",
+      "Tek Ders Sınavı Uygulama Esasları",
+      "Uluslararası Değişim Programları Yabancı Dil Sınavı Uygulama Usul ve Esasları",
+      "Yaz Okulu Uygulama Esasları",
+      "Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar",
+      "Kredili ve Mutlak Sistemdeki Not Karşılıkları ve Yabancı Dil Eşdeğerlikleri",
+      "ESTÜ Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Yükseköğretim Kurumları Öğrenci Konseyleri Yönetmeliği",
+      "ESTÜ Sürekli Eğitim Merkezi Yönetmeliği (ESTÜSEM)",
+      "ESTÜ Yabancı Dil Hazırlık Programı Eğitim Yönetmeliği",
+      "ESTÜ Akademik Danışmanlık Yönergesi",
+      "ESTÜ Diploma ve Diploma Eki Yönergesi",
+      "Kariyer Gelişimi ve Öğrenci Destek Birimi Yönergesi (KAGEM)",
+      "ESTÜ Mühendislik Fakültesi Staj Yönergesi",
+      "ESTÜ Ortak Dersler Bölümü Yönergesi",
+      "Öğrenci Kulüpleri Yönergesi",
+      "Yatay Geçiş Yönergesi",
+      "Yurt Dışından Kabul Edilecek Öğrenciler Yönergesi",
+      "Proje Temelli Staj Yönergesi (PTS)",
+      "ESTU Internship Guide V6 EN",
+      "Quickstart Guide BIM437/BIM444"
+    ]
+  },
+  "questions": [
+      {
+            "id": "Q1",
+            "type": "factual",
+            "difficulty": "easy",
+            "document": "Yaz Okulu Uygulama Esasları",
+            "question": "Yaz okulunda bir öğrenci en fazla kaç kredi veya ders alabilir?",
+            "answer": "Bir öğrenci yaz okulunda toplam 20 ECTS değerini aşmamak koşuluyla en fazla beş ders alabilir.",
+            "reference": "Yaz Okulu Uygulama Esasları, Madde 7"
+          },
+          {
+            "id": "Q2",
+            "type": "reasoning",
+            "difficulty": "medium",
+            "document": "Tek Ders Sınavı Uygulama Esasları",
+            "question": "Mezuniyeti için sadece bir dersi kalan ve bu dersten FF notu almış olan bir öğrenci tek ders sınavına girebilir mi?",
+            "answer": "Evet, mezuniyetleri için sadece bir dersi kalan öğrenciler, başarısız oldukları (FF aldıkları) bu ders için tek ders sınavına girebilirler.",
+            "reference": "Tek Ders Sınavı Uygulama Esasları, Madde 4"
+          },
+          {
+            "id": "Q3",
+            "type": "factual",
+            "difficulty": "easy",
+            "document": "Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar",
+            "question": "Hastalık sebebiyle sınavlara giremeyen bir öğrencinin mazeret raporunu kaç iş günü içinde teslim etmesi gerekir?",
+            "answer": "Öğrencinin mazeretini içeren belgeleri, mazeretin bitiş tarihinden itibaren en geç beş iş günü içinde ilgili birime teslim etmesi gerekir.",
+            "reference": "Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar, Madde 6"
+          },
+          {
+            "id": "Q4",
+            "type": "multi_hop",
+            "difficulty": "hard",
+            "document": "Çoklu Belge",
+            "question": "Azami süresi dolan bir öğrenci, hiç almadığı bir ders için ek sınav hakkından yararlanabilir mi?",
+            "answer": "Hayır. Ek sınav haklarından yararlanabilmek için dersin daha önce alınmış olması ve sınavına girme hakkının kazanılmış olması gerekir. Hiç alınmamış dersler için bu hak tanınmaz.",
+            "reference": "Azami Süre Sonunda Mezun Olamayan Öğrencilere Verilen Ek Sınav Esasları, Madde 5"
+          },
+          {
+            "id": "Q5",
+            "type": "comparison",
+            "difficulty": "medium",
+            "document": "Ortak Dersler Uygulama Usul ve Esasları",
+            "question": "Ortak derslerde (5i dersleri) başarı notu nasıl hesaplanır ve hangi not sistemine tabidir?",
+            "answer": "Ortak derslerde başarı notu, ara sınavın %40'ı ve dönem sonu sınavının %60'ı toplanarak hesaplanır. Bu dersler mutlak değerlendirme sistemine tabidir.",
+            "reference": "Ortak Dersler Uygulama Usul ve Esasları, Madde 10-11"
+          },
+          {
+            "id": "Q6",
+            "type": "edge_case",
+            "difficulty": "hard",
+            "document": "Yaz Okulu Uygulama Esasları",
+            "question": "Başka bir üniversitenin yaz okulundan ders almak isteyen bir ESTÜ öğrencisinin ne yapması gerekir?",
+            "answer": "Öğrenci, alacağı dersin içeriğini ve kredisini kendi bölümüne onaylatmalıdır. İlgili dersin ESTÜ'deki karşılığına eşdeğer olduğu yönetim kurulu tarafından kabul edilmelidir.",
+            "reference": "Yaz Okulu Uygulama Esasları, Madde 12"
+          },
+          {
+            "id": "Q7",
+            "type": "factual",
+            "difficulty": "medium",
+            "document": "Tek Ders Sınavı Uygulama Esasları",
+            "question": "Tek ders sınavında başarılı sayılmak için en az kaç puan almak gerekir?",
+            "answer": "Tek ders sınavında başarılı sayılmak için en az YT, CC veya daha yüksek bir not almak gerekir. Mutlak sistemde bu genellikle 100 üzerinden 50 puana tekabül eder.",
+            "reference": "Tek Ders Sınavı Uygulama Esasları, Madde 8"
+          },
+          {
+            "id": "Q8",
+            "type": "reasoning",
+            "difficulty": "medium",
+            "document": "Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar",
+            "question": "Bir öğrenci, aynı gün ve saatte çakışan iki sınavı için mazeret sınavına girebilir mi?",
+            "answer": "Evet, aynı gün ve saatte sınavı çakışan öğrenciler, bu durumu belgeledikleri takdirde mazeret sınav hakkından yararlanabilirler.",
+            "reference": "Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar, Madde 4/ç"
+          },
+          {
+              "id": "Q9",
+              "type": "factual",
+              "difficulty": "easy",
+              "document": "Mühendislik Fakültesi Staj Yönergesi",
+              "question": "Mühendislik Fakültesi öğrencilerinin zorunlu yaz stajı süresi kaç iş günüdür ve bu stajlar özel yazılım şirketlerinde yapılabilir mi?",
+              "answer": "Mühendislik Fakültesi öğrencilerinin zorunlu staj süresi ilgili bölümün belirlediği iş günü kadardır (genellikle en az 40 iş günü). Stajlar, bölüm staj komisyonunun uygun gördüğü, mühendislik uygulamalarının yapıldığı özel sektör kuruluşlarında (yazılım geliştirme şirketleri vb.) yapılabilir.",
+              "reference": "Mühendislik Fakültesi Staj Yönergesi"
+          },
+          {
+              "id": "Q10",
+              "type": "reasoning",
+              "difficulty": "medium",
+              "document": "Diploma, Diploma Eki ve Diğer Belgelerin Düzenlenmesine İlişkin Yönerge",
+              "question": "Avrupa'da yüksek lisans başvurusu yapacak bir öğrenci, not dökümü (transkript) yerine sadece İngilizce hazırlanmış Diploma Eki'ni (Diploma Supplement) kullanabilir mi?",
+              "answer": "Hayır. Diploma Eki, diplomaya ek olarak verilen ve akademik tanınırlığı kolaylaştıran bir belgedir ancak tek başına bir diploma veya transkript (not dökümü) yerine geçmez, onların yasal ikamesi değildir.",
+              "reference": "Diploma, Diploma Eki ve Diğer Belgelerin Düzenlenmesine İlişkin Yönerge"
+          },
+          {
+              "id": "Q11",
+              "type": "multi_hop",
+              "difficulty": "hard",
+              "document": "Yatay Geçiş Yönergesi & Mühendislik Fakültesi Staj Yönergesi",
+              "question": "Kurumlar arası yatay geçiş ile ESTÜ'ye gelen bir öğrencinin, önceki üniversitesinde yaptığı zorunlu stajlar ESTÜ'de doğrudan kabul edilir mi?",
+              "answer": "Öğrencinin önceki kurumunda yaptığı stajların kabul edilip edilmeyeceği otomatik değildir. Durum, öğrencinin intibak işlemleri sırasında ilgili Bölüm Staj Komisyonu tarafından değerlendirilir ve Fakülte Yönetim Kurulu kararıyla onaylanır.",
+              "reference": "Önlisans ve Lisans Programlarına Yatay Geçiş Yönergesi & Mühendislik Fakültesi Staj Yönergesi"
+          },
+          {
+              "id": "Q12",
+              "type": "edge_case",
+              "difficulty": "hard",
+              "document": "Proje Temelli Staj Yönergesi",
+              "question": "Bir öğrenci, TÜBİTAK destekli bir AR-GE projesinde bursiyer olarak çalışıyorsa, bu çalışmasını 'Proje Temelli Staj' olarak saydırabilir mi?",
+              "answer": "Evet, üniversite-sanayi işbirliği kapsamında yürütülen veya TÜBİTAK gibi kamu kurumlarınca desteklenen AR-GE projelerinde fiilen görev alan öğrenciler, bu çalışmalarını ilgili komisyonun onayı şartıyla proje temelli staj kapsamında değerlendirebilirler.",
+              "reference": "Proje Temelli Staj Yönergesi"
+          },
+          {
+              "id": "Q13",
+              "type": "factual",
+              "difficulty": "easy",
+              "document": "Akademik Danışmanlık Yönergesi",
+              "question": "Öğrencilere akademik danışman ataması ne zaman ve kim tarafından yapılır?",
+              "answer": "Akademik danışman, öğrencinin üniversiteye kesin kaydını yaptırdığı ilk yarıyılın başında ilgili Bölüm Başkanlığının önerisi ve Fakülte/Yüksekokul Yönetim Kurulu kararı ile atanır.",
+              "reference": "Akademik Danışmanlık Yönergesi"
+          },
+          {
+              "id": "Q14",
+              "type": "reasoning",
+              "difficulty": "medium",
+              "document": "Öğrenci Kulüpleri Yönergesi",
+              "question": "Bir öğrenci aynı akademik yıl içerisinde hem Bilgisayar Kulübü'nün hem de Fotoğrafçılık Kulübü'nün Yönetim Kurulu Başkanı olabilir mi?",
+              "answer": "Hayır. Yönerge gereği bir öğrenci aynı anda birden fazla öğrenci kulübünün yönetim kurulunda veya denetleme kurulunda görev alabilir ancak birden fazla kulüpte başkanlık yapamaz.",
+              "reference": "Öğrenci Kulüpleri Yönergesi"
+          },
+          {
+              "id": "Q15",
+              "type": "factual",
+              "difficulty": "medium",
+              "document": "Kariyer Gelişimi ve Öğrenci Destek Birimi Yönergesi",
+              "question": "Kariyer Gelişimi ve Öğrenci Destek Birimi'nin (KAGEM) tam zamanlı iş veya staj bulma garantisi sağlama yükümlülüğü var mıdır?",
+              "answer": "Hayır, birimin öğrencilere doğrudan iş veya staj bulma yükümlülüğü veya garantisi yoktur. Birim; kariyer planlama, özgeçmiş hazırlama, mülakat teknikleri gibi konularda danışmanlık yapar ve sektörle öğrenciler arasında köprü görevi görür.",
+              "reference": "Kariyer Gelişimi ve Öğrenci Destek Birimi Görev ve Çalışma Usulleri Yönergesi"
+          },
+          {
+              "id": "Q16",
+              "type": "comparison",
+              "difficulty": "medium",
+              "document": "Yurt Dışından Kabul Edilecek Öğrenciler Yönergesi",
+              "question": "Yurt dışından kabul edilecek (yabancı uyruklu) öğrencilerin başvuru süreçlerinde lise diploma notu mu yoksa uluslararası/ulusal sınav puanları mı (SAT, YÖS vb.) daha önceliklidir?",
+              "answer": "Değerlendirme süreçlerinde üniversite senatosu tarafından kabul edilen uluslararası sınavlar (SAT vb.) ve ulusal sınavlar (TR-YÖS vb.) öncelikli değerlendirme kriteridir. Sadece lise diploma notu, sınav puanı olmayan veya kontenjanın dolmadığı belirli istisnai durumlarda dikkate alınabilir.",
+              "reference": "Yurt Dışından Kabul Edilecek Öğrenciler İçin Başvuru, Kabul ve Kayıt Koşulları Yönergesi"
+          },
+          {
+              "id": "Q17",
+              "type": "factual",
+              "difficulty": "easy",
+              "document": "ESTÜ Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+              "question": "Öğrencilerin teorik derslere ve uygulamalara devam zorunluluğu yüzde kaçtır?",
+              "answer": "Öğrencilerin, ilk kez aldıkları veya devamsızlık nedeniyle başarısız oldukları teorik derslerin en az %70'ine, uygulamalı derslerin ise en az %80'ine devam etmeleri zorunludur.",
+              "reference": "Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği, Devam Zorunluluğu Maddesi"
+          },
+          {
+              "id": "Q18",
+              "type": "reasoning",
+              "difficulty": "medium",
+              "document": "ESTÜ Yabancı Dil Hazırlık Programı Eğitim-Öğretim ve Sınav Yönetmeliği",
+              "question": "Eğitim dili %100 İngilizce olan bir bölümde (örneğin Bilgisayar Mühendisliği) zorunlu hazırlık sınıfını iki yıl üst üste geçemeyen bir öğrencinin durumu ne olur?",
+              "answer": "Zorunlu yabancı dil hazırlık sınıfında iki yıl sonunda başarısız olan öğrencilerin ilişiği kesilir. Ancak bu öğrenciler, talep etmeleri halinde Türkçe eğitim veren eşdeğer programlara ÖSYM tarafından yerleştirilebilirler.",
+              "reference": "Yabancı Dil Eğitim ve Sınav Yönetmeliği, Başarı ve İlişik Kesme"
+          },
+          {
+              "id": "Q19",
+              "type": "multi_hop",
+              "difficulty": "hard",
+              "document": "Sınav Yönetmeliği & Yabancı Dil Sınav Yönetmeliği",
+              "question": "İngilizce hazırlık sınıfında geçirilen 1 yıllık süre, lisans programı için verilen 7 yıllık azami öğrenim süresine dahil edilir mi?",
+              "answer": "Hayır, zorunlu yabancı dil hazırlık sınıfında geçirilen süre, önlisans ve lisans programlarının azami öğrenim süresi hesaplamasına dahil edilmez.",
+              "reference": "Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği"
+          },
+          {
+              "id": "Q20",
+              "type": "factual",
+              "difficulty": "easy",
+              "document": "Quickstart_Guide_BIM437_BIM444_25_26",
+              "question": "BIM 437 ve BIM 444 (Bitirme Projesi) derslerini alan bir öğrencinin, dönemin başında proje fikrini onaylatmak için hangi belgeyi teslim etmesi gerekir?",
+              "answer": "Öğrencilerin, proje konularını belirleyip akademik danışmanlarının onayını alarak, akademik takvimde belirtilen süre içinde 'Project Proposal' (Proje Öneri Formu) belgesini teslim etmeleri gerekmektedir.",
+              "reference": "Quickstart Guide BIM437/BIM444 25-26"
+          },
+          {
+              "id": "Q21",
+              "type": "edge_case",
+              "difficulty": "hard",
+              "document": "estu_internship_guide_upd_V6_EN",
+              "question": "If a Computer Engineering student takes 2 courses during the summer school, can they simultaneously complete their mandatory 40-day summer internship?",
+              "answer": "No. According to the internship guide, internships cannot overlap with academic terms or summer school classes. The student must complete the internship on dates when they have no classes or exams.",
+              "reference": "ESTU Internship Guide V6 EN"
+          },
+          {
+              "id": "Q22",
+              "type": "comparison",
+              "difficulty": "medium",
+              "document": "Yükseköğretim Kurumları Öğrenci Konseyleri Yönetmeliği",
+              "question": "Siyasi bir partiye üye olan bir öğrenci, ESTÜ Öğrenci Konseyi seçimlerinde bölüm temsilcisi adayı olabilir mi?",
+              "answer": "Hayır. Öğrenci temsilcisi adayı olabilmek için aranan şartlardan biri de siyasi parti organlarında üye veya görevli olmamaktır.",
+              "reference": "Öğrenci Konseyleri Yönetmeliği, Adaylık Şartları"
+          },
+          {
+              "id": "Q23",
+              "type": "factual",
+              "difficulty": "medium",
+              "document": "ESTÜ Sürekli Eğitim Uygulama ve Araştırma Merkezi Yönetmeliği (ESTÜSEM)",
+              "question": "ESTÜSEM tarafından düzenlenen eğitim programları sonunda katılımcılara akademik derece (Önlisans/Lisans diploması) verilir mi?",
+              "answer": "Hayır, ESTÜSEM akademik bir derece veya diploma vermez. Başarıyla tamamlanan programlar sonunda katılımcılara sadece 'Sertifika', 'Katılım Belgesi' veya 'Başarı Belgesi' verilir.",
+              "reference": "ESTÜSEM Yönetmeliği, Belgelendirme"
+          },
+          {
+              "id": "Q24",
+              "type": "reasoning",
+              "difficulty": "medium",
+              "document": "ESTÜ Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+              "question": "Genel Not Ortalaması (GNO) 1.80 olan bir öğrenci, 5. yarıyılda üstten (7. yarıyıldan) ders alabilir mi?",
+              "answer": "Hayır. Bir öğrencinin üst yarıyıllardan ders alabilmesi için Genel Not Ortalamasının (GNO) genellikle en az 2.50 veya 3.00 (ilgili yönetmelik alt sınırına göre) olması ve alttan başarısız dersinin bulunmaması gerekir. 1.80 ortalama ile üstten ders alınamaz.",
+              "reference": "Sınav Yönetmeliği, Ders Alma Koşulları"
+          },
+          {
+              "id": "Q25",
+              "type": "edge_case",
+              "difficulty": "hard",
+              "document": "Quickstart_Guide_BIM437_BIM444_25_26 & PTS_Yonergesi_2024",
+              "question": "BIM 437/444 kodlu bitirme projesi ile 'Proje Temelli Staj (PTS)' aynı dönem içerisinde aynı proje konusu üzerinden saydırılabilir mi?",
+              "answer": "Genellikle hayır. Bitirme projesi (BIM 437/444) ve staj (veya PTS) farklı akademik yükümlülüklerdir ve ayrı ayrı değerlendirilirler. Bir çalışmanın hem bitirme projesi hem de zorunlu staj olarak aynı anda kredilendirilmesi mümkün değildir.",
+              "reference": "BIM 437/444 Guide & Proje Temelli Staj Yönergesi"
+          },
+          {
+              "id": "Q26",
+              "type": "factual",
+              "difficulty": "medium",
+              "document": "ESTÜ Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+              "question": "Çift Anadal Programına (ÇAP) başvurabilmek için öğrencinin anadal programındaki Genel Not Ortalaması (GNO) en az kaç olmalıdır?",
+              "answer": "Çift anadal programına başvurabilmek için öğrencinin başvuru sırasındaki GNO'sunun en az 3.00 (4.00 üzerinden) olması ve anadal programında başarı sıralaması itibariyle en üst %20'lik dilimde bulunması gerekir.",
+              "reference": "Sınav Yönetmeliği, Çift Anadal Programı"
+            },
+            {
+              "id": "Q27",
+              "type": "reasoning",
+              "difficulty": "hard",
+              "document": "ESTÜ Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+              "question": "Bir dersten (DZ) Devamsız harf notu alan bir öğrenci, o dersin bütünleme sınavına girebilir mi?",
+              "answer": "Hayır, giremez. Bütünleme sınavına girebilmek için ilgili dersin yarıyıl sonu (final) sınavına girme hakkı kazanmış olmak gerekir. Devamsızlıktan kalan (DZ) öğrenciler bu hakkı kazanmamış sayılır.",
+              "reference": "Sınav Yönetmeliği, Bütünleme Sınavları"
+            },
+            {
+              "id": "Q28",
+              "type": "factual",
+              "difficulty": "easy",
+              "document": "estu_internship_guide_upd_V6_EN",
+              "question": "Bilgisayar Mühendisliği öğrencilerinin zorunlu yaz stajı defterini/raporunu (Internship Report) hangi dilde yazmaları gerekmektedir?",
+              "answer": "Bilgisayar Mühendisliği %100 İngilizce bir program olduğu için, staj raporlarının (Internship Report) tamamen İngilizce dilinde yazılması zorunludur.",
+              "reference": "ESTU Internship Guide V6 EN, Report Writing Guidelines"
+            },
+            {
+              "id": "Q29",
+              "type": "multi_hop",
+              "difficulty": "hard",
+              "document": "Staj Yönergesi & Haklı ve Geçerli Nedenler Yönergesi",
+              "question": "Yaz stajı sırasında 3 gün hastanede yatan ve rapor alan bir öğrencinin bu günleri staj süresinden sayılır mı?",
+              "answer": "Hayır, sayılmaz. Staj sırasında alınan sağlık raporları veya diğer haklı/geçerli mazeret günleri staj süresine dahil edilmez. Öğrencinin eksik kalan bu iş günlerini staj süresine ekleyerek tamamlaması gerekir.",
+              "reference": "Mühendislik Fakültesi Staj Yönergesi & Haklı ve Geçerli Nedenler"
+            },
+            {
+              "id": "Q30",
+              "type": "factual",
+              "difficulty": "medium",
+              "document": "2547 Sayılı Yükseköğretim Kanunu",
+              "question": "2547 sayılı kanuna göre, lisans programlarında azami öğrenim süresi kaç yıldır?",
+              "answer": "Dört yıllık lisans programları için azami öğrenim süresi yedi (7) yıldır.",
+              "reference": "2547 Sayılı Yükseköğretim Kanunu, Madde 44/c"
+            },
+            {
+              "id": "Q31",
+              "type": "reasoning",
+              "difficulty": "medium",
+              "document": "Öğrenci Kulüpleri Yönergesi",
+              "question": "Kuruluş aşamasındaki bir öğrenci kulübü, ilk genel kurulunu ve başkanlık seçimini ne kadar süre içinde yapmalıdır?",
+              "answer": "Yeni kurulan bir öğrenci kulübü, kuruluş onayından itibaren en geç bir (1) ay içerisinde ilk genel kurulunu toplamalı ve yönetim/denetim organlarını seçmelidir, aksi halde kulüp kapatılır.",
+              "reference": "Öğrenci Kulüpleri Yönergesi, Kulüplerin İşleyişi"
+            },
+            {
+              "id": "Q32",
+              "type": "comparison",
+              "difficulty": "hard",
+              "document": "Yatay Geçiş Yönergesi",
+              "question": "Kurum içi yatay geçiş ile Merkezi Yerleştirme Puanıyla (Ek Madde 1) yatay geçiş arasındaki temel fark nedir?",
+              "answer": "Kurum içi yatay geçişte öğrencinin üniversitedeki GNO'su ve başarı durumu dikkate alınırken; Ek Madde 1 (Merkezi Yerleştirme) ile geçişte öğrencinin üniversite sınavına girdiği yıl aldığı YKS puanının, geçmek istediği bölümün o yılki taban puanına eşit veya yüksek olması şartı aranır, GNO'ya bakılmaz.",
+              "reference": "Yatay Geçiş Yönergesi"
+            },
+            {
+              "id": "Q33",
+              "type": "edge_case",
+              "difficulty": "hard",
+              "document": "Uluslararası Değişim Programları Yabancı Dil Sınavı Uygulama Esasları",
+              "question": "Erasmus+ hareketliliği için dil sınavına başvuran ancak mazeretsiz olarak sınava girmeyen öğrenciye bir sonraki başvurusunda nasıl bir yaptırım uygulanır?",
+              "answer": "Yabancı dil sınavına başvurduğu halde mücbir sebep olmaksızın girmeyen öğrencilerin, bir sonraki uluslararası değişim programı (Erasmus vb.) başvurularında genel değerlendirme puanlarından eksi (-) 5 puan düşülür.",
+              "reference": "Uluslararası Değişim Programları Yabancı Dil Sınavı Esasları"
+            },
+            {
+              "id": "Q34",
+              "type": "factual",
+              "difficulty": "medium",
+              "document": "Kredili ve Mutlak Sistemdeki Not Karşılıkları",
+              "question": "ESTÜ not sisteminde 'DD' harf notunun 4.00'lük sistemdeki katsayı karşılığı kaçtır?",
+              "answer": "'DD' harf notunun 4.00'lük katsayı sistemindeki karşılığı 1.00'dır. Şartlı geçer nottur.",
+              "reference": "Not Karşılıkları ve Yabancı Dil Eşdeğerlikleri Tablosu"
+            },
+            {
+              "id": "Q35",
+              "type": "factual",
+              "difficulty": "easy",
+              "document": "Ortak Dersler Uygulama Usul ve Esasları",
+              "question": "Türk Dili (TÜR) ve Atatürk İlkeleri ve İnkılap Tarihi (TAR) derslerinden muaf olmak isteyen öğrenciler muafiyet sınavına ne zaman girebilir?",
+              "answer": "Öğrenciler, üniversiteye ilk kayıt yaptırdıkları akademik yılın Güz yarıyılı başında açılan ortak dersler muafiyet sınavına girebilirler.",
+              "reference": "Ortak Dersler Uygulama Usul ve Esasları, Muafiyet"
+            },
+            {
+              "id": "Q36",
+              "type": "reasoning",
+              "difficulty": "medium",
+              "document": "Quickstart_Guide_BIM437_BIM444_25_26",
+              "question": "BIM 437 (Bitirme Projesi I) dersinden başarısız olan bir öğrenci, bahar döneminde BIM 444 (Bitirme Projesi II) dersini alabilir mi?",
+              "answer": "Hayır, alamaz. BIM 437 dersi, BIM 444 dersinin ön koşuludur (prerequisite). Öğrencinin BIM 444'ü alabilmesi için önce BIM 437'yi başarıyla tamamlaması gerekir.",
+              "reference": "Quickstart Guide BIM437_BIM444"
+            },
+            {
+              "id": "Q37",
+              "type": "edge_case",
+              "difficulty": "hard",
+              "document": "Yurt Dışından Kabul Edilecek Öğrenciler Yönergesi & Yabancı Dil Hazırlık Yönetmeliği",
+              "question": "Eğitim dili %100 İngilizce olan bir bölüme kabul edilen yabancı uyruklu bir öğrenci, Türkçe Yeterlik (TÖMER) belgesi getirmek zorunda mıdır?",
+              "answer": "Eğitim dili tamamen İngilizce olan programlarda okuyan yabancı uyruklu öğrencilerin mezun olabilmeleri için Türkçe yeterlik belgesi şartı aranmaz; ancak üniversite yaşamlarına uyum sağlamaları için Türkçe dersleri almaları tavsiye edilebilir. Eğitim dili Türkçe veya kısmen İngilizce olanlarda ise B2/C1 seviyesi zorunludur.",
+              "reference": "Yurt Dışından Kabul Edilecek Öğrenciler Yönergesi"
+            },
+            {
+              "id": "Q38",
+              "type": "multi_hop",
+              "difficulty": "hard",
+              "document": "Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar & Sınav Yönetmeliği",
+              "question": "Birinci derece yakını vefat eden bir öğrenci, devamsızlık sınırını aştığında mazeret göstererek devamsızlıktan muaf tutulabilir mi?",
+              "answer": "Hayır. Haklı ve geçerli nedenler (örneğin vefat durumu), öğrenciye ara sınavlar için mazeret sınavı hakkı tanır ancak Sınav Yönetmeliği uyarınca devamsızlık kuralı esnetilmez. Mazeretli olunan günler de devamsızlıktan sayılır.",
+              "reference": "Haklı ve Geçerli Nedenler Esasları & Sınav Yönetmeliği"
+            },
+            {
+              "id": "Q39",
+              "type": "factual",
+              "difficulty": "medium",
+              "document": "Proje Temelli Staj Yönergesi (PTS)",
+              "question": "Öğrenciler 'Proje Temelli Staj' kapsamında TUSAŞ, TEİ, ASELSAN gibi kurumlardaki uzun dönem aday mühendislik programlarını saydırabilir mi?",
+              "answer": "Evet, savunma sanayii firmalarının yürüttüğü uzun dönemli aday mühendislik ve proje programları (örneğin SKY, Vizyoner Genç vb.), Bölüm Staj Komisyonunun uygun bulması halinde Proje Temelli Staj (PTS) olarak değerlendirilebilir.",
+              "reference": "Proje Temelli Staj Yönergesi (PTS)"
+            },
+            {
+              "id": "Q40",
+              "type": "reasoning",
+              "difficulty": "medium",
+              "document": "Yükseköğretim Kurumları Öğrenci Konseyleri Yönetmeliği",
+              "question": "Öğrenci konseyi başkanlığı seçimlerinde oyların eşit çıkması durumunda süreç nasıl işler?",
+              "answer": "Oyların eşit çıkması halinde, eşit oy alan adaylar arasında aynı gün içinde ikinci tur oylama yapılır. İkinci turda da eşitlik bozulmazsa kura çekimi yöntemiyle başkan belirlenir.",
+              "reference": "Öğrenci Konseyleri Yönetmeliği"
+            },
+            {
+              "id": "Q41",
+              "type": "factual",
+              "difficulty": "easy",
+              "document": "Kariyer Gelişimi ve Öğrenci Destek Birimi Yönergesi (KAGEM)",
+              "question": "Öğrenciler mülakat simülasyonu veya özgeçmiş (CV) hazırlama desteği almak için üniversitenin hangi birimine başvurmalıdır?",
+              "answer": "Öğrenciler, kariyer danışmanlığı, özgeçmiş hazırlama ve mülakat teknikleri desteği için Kariyer Gelişimi ve Öğrenci Destek Birimi'ne (KAGEM) başvurmalıdır.",
+              "reference": "KAGEM Yönergesi"
+            },
+            {
+              "id": "Q42",
+              "type": "comparison",
+              "difficulty": "medium",
+              "document": "ESTÜ Sürekli Eğitim Merkezi (ESTÜSEM) & Sınav Yönetmeliği",
+              "question": "Bir öğrencinin ESTÜSEM'den aldığı 'Python Programlama Sertifikası', lisans transkriptinde kredili seçmeli ders olarak sayılabilir mi?",
+              "answer": "Hayır. ESTÜSEM tarafından verilen eğitim sertifikaları, lisans programındaki akademik kredili derslerin yerine sayılamaz ve transkripte ders olarak işlenmez.",
+              "reference": "ESTÜSEM Yönetmeliği"
+            },
+            {
+              "id": "Q43",
+              "type": "edge_case",
+              "difficulty": "hard",
+              "document": "Azami Süre Sonunda Mezun Olamayan Öğrencilere Verilen Ek Sınav Esasları",
+              "question": "7 yıllık azami süresini dolduran ancak hiç devamsızlıktan kalmadığı (DZ olmadığı) toplam 6 başarısız dersi bulunan bir öğrencinin ilişiği kesilir mi?",
+              "answer": "Kesilmez. Azami süre sonunda hiç almadığı veya devamsızlıktan kaldığı ders sayısı 5'ten fazla olmayan öğrencilere, başarısız oldukları tüm dersler için iki ek sınav hakkı verilir.",
+              "reference": "Ek Sınav Esasları, Madde 6"
+            },
+            {
+              "id": "Q44",
+              "type": "factual",
+              "difficulty": "medium",
+              "document": "Diploma, Diploma Eki ve Diğer Belgelerin Düzenlenmesi Yönergesi",
+              "question": "Kayıp edilen bir diplomanın yenisi çıkarıldığında, belgenin üzerinde hangi ibare yer alır?",
+              "answer": "Diplomasını kaybeden öğrenciye yenisi düzenlendiğinde, belgenin üzerinde 'İkinci Nüsha' (Duplicate) ibaresi yer almak zorundadır.",
+              "reference": "Diploma Düzenleme Yönergesi"
+            },
+            {
+              "id": "Q45",
+              "type": "reasoning",
+              "difficulty": "hard",
+              "document": "Quickstart_Guide_BIM437_BIM444_25_26",
+              "question": "BIM 444 Bitirme Projesi II'de kodlarını ve projeyi tamamlamış ancak Final Poster sunumuna jüri karşısında katılmayan bir öğrenci projeden geçebilir mi?",
+              "answer": "Hayır. Bitirme projesi kılavuzuna göre, dönemin sonunda jüri karşısında yapılan poster ve proje sunumuna (Presentation/Defense) katılmak zorunludur. Sunuma katılmayan öğrenciler doğrudan başarısız sayılır.",
+              "reference": "Quickstart Guide BIM437_BIM444"
+            },
+            {
+              "id": "Q46",
+              "type": "factual",
+              "difficulty": "easy",
+              "document": "ESTÜ Akademik Danışmanlık Yönergesi",
+              "question": "Bir öğrencinin ders kaydını onaylamak ve mezuniyet aşamasında kredi kontrolünü yapmak kimin görevidir?",
+              "answer": "Bu görevler, öğrenciye bölüm tarafından atanan 'Akademik Danışman'ın (Academic Advisor) sorumluluğundadır.",
+              "reference": "Akademik Danışmanlık Yönergesi"
+            },
+            {
+              "id": "Q47",
+              "type": "multi_hop",
+              "difficulty": "hard",
+              "document": "Yaz Okulu Esasları & Sınav Yönetmeliği",
+              "question": "Bahar döneminde alıp FF ile kaldığı bir dersi, Yaz Okulunda alıp BB ile geçen öğrencinin GNO'su hesaplanırken hangi not dikkate alınır?",
+              "answer": "Öğrencinin transkriptinde her iki not da görünür ancak Genel Not Ortalaması (GNO) hesaplanırken son alınan not (Yaz okulunda alınan BB) geçerli olur ve önceki notun katsayısı hesaptan düşülür.",
+              "reference": "Yaz Okulu Esasları & Sınav Yönetmeliği, Notların Değerlendirilmesi"
+            },
+            {
+              "id": "Q48",
+              "type": "factual",
+              "difficulty": "medium",
+              "document": "ESTÜ Yabancı Dil Hazırlık Programı Eğitim-Öğretim Yönetmeliği",
+              "question": "İsteğe bağlı yabancı dil hazırlık sınıfı okuyan bir öğrenci, bahar dönemi sonunda başarısız olursa lisans programına başlayabilir mi?",
+              "answer": "Evet, başlayabilir. İsteğe bağlı hazırlık sınıfında başarısız olan öğrenciler, bir sonraki akademik yılda kazandıkları lisans/önlisans programına kayıt yaptırarak eğitimlerine devam edebilirler.",
+              "reference": "Yabancı Dil Hazırlık Programı Yönetmeliği"
+            },
+            {
+              "id": "Q49",
+              "type": "reasoning",
+              "difficulty": "medium",
+              "document": "Tek Ders Sınavı Uygulama Esasları",
+              "question": "Stajını henüz tamamlamamış ancak teorik olarak mezuniyeti için tek dersi kalan bir öğrenci tek ders sınavına girebilir mi?",
+              "answer": "Evet, girebilir. Zorunlu staj uygulamasını tamamlamamış olması, teorik derslerden mezuniyet durumuna gelen öğrencinin tek ders sınavına girmesine engel değildir.",
+              "reference": "Tek Ders Sınavı Uygulama Esasları"
+            },
+            {
+              "id": "Q50",
+              "type": "comparison",
+              "difficulty": "medium",
+              "document": "estu_internship_guide_upd_V6_EN",
+              "question": "Yazılım Mühendisliği/Bilgisayar Mühendisliği alanında 'Software Development' stajı ile 'IT Support' stajı komisyon tarafından aynı şekilde mi değerlendirilir?",
+              "answer": "Hayır. Staj kılavuzuna göre IT Support/Helpdesk görevleri mühendislik stajı olarak kabul edilmeyebilir veya kısmen kabul edilir. Stajın mühendislik tasarımı ve yazılım geliştirme (Software Development) içermesi esastır.",
+              "reference": "ESTU Internship Guide V6 EN, Acceptable Tasks"
+            },
+            {
+              "id": "Q51",
+              "type": "edge_case",
+              "difficulty": "hard",
+              "document": "Önlisans ve Lisans Programlarına Yatay Geçiş Yönergesi",
+              "question": "Disiplin cezası (örneğin kınama) almış bir öğrenci ESTÜ'ye kurumlar arası yatay geçiş yapabilir mi?",
+              "answer": "Hayır. Kurumlar arası yatay geçiş başvurularında adayların, önceki yükseköğretim kurumlarında disiplin cezası almamış olmaları şartı aranır.",
+              "reference": "Yatay Geçiş Yönergesi, Başvuru Şartları"
+            },
+            {
+              "id": "Q52",
+              "type": "factual",
+              "difficulty": "easy",
+              "document": "2547 Sayılı Yükseköğretim Kanunu",
+              "question": "Üniversitelerde rektör kim tarafından atanır ve görev süresi kaç yıldır?",
+              "answer": "Rektör, Cumhurbaşkanı tarafından atanır ve görev süresi 4 (dört) yıldır.",
+              "reference": "2547 Sayılı Kanun, Madde 13"
+            },
+            {
+              "id": "Q53",
+              "type": "reasoning",
+              "difficulty": "hard",
+              "document": "Ortak Dersler Bölümü Yönergesi & Sınav Yönetmeliği",
+              "question": "Ortak derslerde (örneğin İş Sağlığı ve Güvenliği) uygulanan bağıl değerlendirme (Çan Eğrisi) sisteminin sınırı nedir, sınıf ortalaması kaçın altında olursa doğrudan mutlak sistem uygulanır?",
+              "answer": "Ortak derslerde sınıf mevcudunun ve sınıf not ortalamasının belirli bir değerin (genellikle 15-20 öğrenci altı veya ortalamanın çok düşük/çok yüksek olduğu durumlar) altında/üstünde olması halinde çan eğrisi iptal edilir ve senatonun belirlediği mutlak not sistemi baremleri uygulanır.",
+              "reference": "Ortak Dersler Uygulama Esasları"
+            },
+            {
+              "id": "Q54",
+              "type": "multi_hop",
+              "difficulty": "hard",
+              "document": "Haklı Geçerli Nedenler & Yaz Okulu",
+              "question": "Yaz okulunda ders alan bir öğrenci, final sınavı haftasında Covid-19 geçirirse mazeret sınavına girebilir mi?",
+              "answer": "Yaz okulu esaslarına göre, normal dönemlerin aksine Yaz Okulunda alınan derslerin mazeret sınavı veya bütünleme sınavı genellikle yapılmaz. (Not: Bu sistem üniversitenin o yılki senato kararına göre edge-case kabul edilir, RAG sisteminin ilgili yönetmeliğin 'Sınavlar' maddesine bakması gerekir).",
+              "reference": "Yaz Okulu Uygulama Esasları"
+            },
+            {
+              "id": "Q55",
+              "type": "factual",
+              "difficulty": "medium",
+              "document": "ESTÜ Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+              "question": "Sınav kağıdının yeniden incelenmesi (maddi hata itirazı) için öğrencinin sınav sonucunun ilanından itibaren kaç gün içinde başvurması gerekir?",
+              "answer": "Öğrenciler, sınav sonuçlarının ilanından itibaren en geç 5 (beş) iş günü içinde ilgili akademik birime dilekçe ile başvurarak maddi hata itirazında bulunabilirler.",
+              "reference": "Sınav Yönetmeliği, Sınav Sonucuna İtiraz"
+            },
+            {
+              "id": "Q56",
+              "type": "factual",
+              "difficulty": "easy",
+              "document": "ESTÜ Öğrenci Kulüpleri Yönergesi",
+              "question": "Bir öğrenci kulübünün kurulabilmesi için en az kaç ESTÜ öğrencisinin kurucu üye olması gerekir?",
+              "answer": "Yeni bir öğrenci kulübü kurulabilmesi için farklı fakülte/bölümlerden olabilecek şekilde en az 15 kurucu üyenin imzası ve başvurusu gereklidir.",
+              "reference": "Öğrenci Kulüpleri Yönergesi"
+            },
+            {
+              "id": "Q57",
+              "type": "reasoning",
+              "difficulty": "medium",
+              "document": "Uluslararası Değişim Programları Yabancı Dil Sınavı Esasları",
+              "question": "Öğrenci YDS'den (Ulusal sınav) 85 almıştır. Erasmus başvurusu için ESTÜ'nün kendi yapacağı dil sınavına tekrar girmek zorunda mıdır?",
+              "answer": "Zorunda değildir. Öğrenciler, eşdeğerliği senato tarafından kabul edilen ulusal (YDS/YÖKDİL vb.) veya uluslararası (TOEFL/IELTS) sınavlardan alınan geçerli puan belgelerini sunarak üniversitenin yaptığı sınava girmeden muafiyet sağlayabilirler.",
+              "reference": "Uluslararası Değişim Sınav Esasları"
+            },
+            {
+              "id": "Q58",
+              "type": "comparison",
+              "difficulty": "medium",
+              "document": "Sınav Yönetmeliği",
+              "question": "Yandal programı ile Çift Anadal (ÇAP) programı mezuniyeti arasındaki temel belge farkı nedir?",
+              "answer": "Çift Anadal (ÇAP) programını tamamlayan öğrenciye ikinci bir 'Lisans Diploması' verilirken; Yandal programını tamamlayan öğrenciye lisans diploması değil, sadece o alanda uzmanlık/başarı gösterdiğine dair 'Yandal Sertifikası' verilir.",
+              "reference": "Sınav Yönetmeliği, ÇAP ve Yandal Hükümleri"
+            },
+            {
+              "id": "Q59",
+              "type": "edge_case",
+              "difficulty": "hard",
+              "document": "Proje Temelli Staj Yönergesi (PTS)",
+              "question": "Öğrenci, öğretim üyesinin yürüttüğü BAP (Bilimsel Araştırma Projesi) projesinde görev alarak Proje Temelli Stajını tamamlayabilir mi?",
+              "answer": "Evet, öğretim üyeleri yürütücülüğündeki TUBİTAK, BAP, AB projeleri gibi akademik araştırma projelerinde resmi olarak aktif görev ve sorumluluk alan öğrenciler, bu eforlarını Bölüm onayıyla PTS (Proje Temelli Staj) olarak kredilendirebilirler.",
+              "reference": "PTS Yönergesi"
+            },
+            {
+              "id": "Q60",
+              "type": "factual",
+              "difficulty": "medium",
+              "document": "Akademik Danışmanlık Yönergesi",
+              "question": "Akademik danışman, öğrencinin ders seçimindeki onayını en geç ne zamana kadar tamamlamalıdır?",
+              "answer": "Danışman onayları, akademik takvimde belirtilen ders kayıt ve ekle-sil (add-drop) haftasının son gününe kadar tamamlanmalıdır.",
+              "reference": "Akademik Danışmanlık Yönergesi"
+            },
+            {
+              "id": "Q61",
+              "type": "reasoning",
+              "difficulty": "medium",
+              "document": "Yurt Dışından Kabul Edilecek Öğrenciler Yönergesi",
+              "question": "Türk vatandaşı olup lise eğitiminin tamamını (4 yılını) yurt dışında tamamlayan bir aday, yabancı uyruklu öğrenci kontenjanından (YÖS) başvurabilir mi?",
+              "answer": "Evet, başvurabilir. T.C. uyruklu olup lise öğreniminin tamamını KKTC hariç yabancı bir ülkede tamamlayan adaylar, uluslararası öğrenci başvuru şartlarını sağlarlar.",
+              "reference": "Yurt Dışından Kabul Edilecek Öğrenciler Yönergesi, Başvuru Şartları"
+            },
+            {
+              "id": "Q62",
+              "type": "factual",
+              "difficulty": "easy",
+              "document": "Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar",
+              "question": "Doğal afetler (deprem, sel vb.) mazeret kabul edilip sınav hakkı doğurur mu?",
+              "answer": "Evet. Yükseköğretim Kurulunun veya Üniversite Senatosunun kararı doğrultusunda, öğrencinin bulunduğu bölgede yaşanan doğal afetler haklı ve geçerli mazeret olarak kabul edilir.",
+              "reference": "Haklı ve Geçerli Nedenler Esasları"
+            },
+            {
+              "id": "Q63",
+              "type": "multi_hop",
+              "difficulty": "hard",
+              "document": "Mühendislik Staj Yönergesi & Internship Guide EN",
+              "question": "Bilgisayar Mühendisliğinde 20 günlük 'Donanım/Ağ' ve 20 günlük 'Yazılım' stajı aynı şirkette arka arkaya kesintisiz olarak yapılabilir mi?",
+              "answer": "Evet, yapılabilir. Ancak bunun için şirketin donanım ve yazılım birimlerinin ayrı olduğu belgelenmeli ve kılavuza uygun olarak her iki staj türü için (hardware/network ve software) iki ayrı staj defteri düzenlenip teslim edilmelidir.",
+              "reference": "Staj Yönergesi & Internship Guide EN"
+            },
+            {
+              "id": "Q64",
+              "type": "factual",
+              "difficulty": "medium",
+              "document": "Diploma, Diploma Eki Yönergesi",
+              "question": "Diploma eki (Diploma Supplement) ücretli bir belge midir?",
+              "answer": "Hayır. Avrupa Birliği yükseköğretim standartlarına (Bologna Süreci) göre mezun olan her öğrenciye Diploma Eki, diploma ile birlikte ücretsiz olarak verilir.",
+              "reference": "Diploma Eki Düzenleme Yönergesi"
+            },
+            {
+              "id": "Q65",
+              "type": "reasoning",
+              "difficulty": "hard",
+              "document": "Azami Süre Sonunda Verilen Ek Sınav Esasları",
+              "question": "Azami süresi biten ve verilen iki ek sınav hakkı sonucunda başarısız ders sayısını 5'e düşüren bir öğrencinin durumu ne olur?",
+              "answer": "Ek sınavlar sonucunda başarısız ders sayısını 5 (beş) derse kadar düşüren öğrencilere, bu 5 dersi tamamlamaları için ilave olarak 3 (üç) yarıyıl (dönem) ek süre verilir.",
+              "reference": "Ek Sınav Esasları"
+            },
+            {
+                "id": "Q66",
+                "type": "factual",
+                "difficulty": "easy",
+                "document": "Mühendislik Fakültesi Staj Yönergesi",
+                "question": "Zorunlu yaz stajı süresince öğrencinin SGK (İş Kazası ve Meslek Hastalığı) sigorta primleri kim tarafından ödenir?",
+                "answer": "Öğrencinin zorunlu stajı süresince İş Kazası ve Meslek Hastalığı sigorta primleri Üniversite (ESTÜ) tarafından ödenir.",
+                "reference": "Staj Yönergesi, Sigorta İşlemleri"
+              },
+              {
+                "id": "Q67",
+                "type": "reasoning",
+                "difficulty": "medium",
+                "document": "ESTÜ Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+                "question": "Dönem sonu final sınavında başarılı olup bir dersten (CC) harf notu alan bir öğrenci, notunu yükseltmek amacıyla o dersin bütünleme sınavına girebilir mi?",
+                "answer": "Hayır, giremez. Bütünleme sınavlarına sadece yarıyıl sonu sınavına girme hakkı elde edip de sınava girmeyen, sınavda başarısız olan (FF, FD) veya şartlı başarılı (DD, DC) not alan öğrenciler girebilir.",
+                "reference": "Sınav Yönetmeliği, Bütünleme Sınavları"
+              },
+              {
+                "id": "Q68",
+                "type": "multi_hop",
+                "difficulty": "hard",
+                "document": "Sınav Yönetmeliği & Azami Süre Esasları",
+                "question": "Çift Anadal Programına (ÇAP) kayıtlı bir öğrencinin, anadalından mezun olduktan sonra ikinci anadal programını bitirmesi için azami süresi uzatılır mı?",
+                "answer": "Evet. Anadal programından mezuniyet hakkı elde eden ancak ÇAP programını bitiremeyen öğrencilere, ÇAP programını tamamlamaları için ilgili yönetim kurulu kararıyla ilave ek süre (genellikle 2 yarıyıl) tanınır.",
+                "reference": "Sınav Yönetmeliği, Çift Anadal Programı"
+              },
+              {
+                "id": "Q69",
+                "type": "edge_case",
+                "difficulty": "hard",
+                "document": "Quickstart_Guide_BIM437_BIM444_25_26",
+                "question": "BIM 437/444 (Bitirme Projesi) dersini alan bir öğrenci, projeyi bir takım halinde değil de tamamen bireysel (tek başına) yapabilir mi?",
+                "answer": "Takım çalışması (teamwork) teşvik edilmekle birlikte, gerekli durumlarda akademik danışmanın onayı ile öğrencinin bitirme projesini bireysel olarak yürütmesi mümkündür.",
+                "reference": "Quickstart Guide BIM437/BIM444"
+              },
+              {
+                "id": "Q70",
+                "type": "factual",
+                "difficulty": "medium",
+                "document": "ESTÜ Yabancı Dil Hazırlık Programı Eğitim-Öğretim Yönetmeliği",
+                "question": "İngilizce Hazırlık Muafiyet (Atlama) sınavında başarılı sayılabilmek için 100 üzerinden en az kaç puan almak gerekir?",
+                "answer": "Öğrencinin Yabancı Dil Muafiyet Sınavından başarılı sayılabilmesi için (eğitim dili %100 İngilizce olan bölümlerde) genellikle 100 üzerinden en az 60 veya 65 puan alması gerekir (Baraj notu senato tarafından belirlenir).",
+                "reference": "Yabancı Dil Hazırlık Yönetmeliği, Başarı Durumu"
+              },
+              {
+                "id": "Q71",
+                "type": "comparison",
+                "difficulty": "medium",
+                "document": "Yatay Geçiş Yönergesi",
+                "question": "Kurum içi yatay geçiş ile Kurumlar arası yatay geçiş başvuru dönemleri aynı mıdır?",
+                "answer": "Her ikisinin de başvuru takvimi Üniversite Senatosu tarafından akademik takvimle duyurulur. Ancak Kurum içi yatay geçişler genellikle ilgili fakülte bünyesinde değerlendirilirken, Kurumlar arası yatay geçişler YÖK takvimine uygun olarak daha merkezi bir incelemeden geçer.",
+                "reference": "Yatay Geçiş Yönergesi"
+              },
+              {
+                "id": "Q72",
+                "type": "factual",
+                "difficulty": "easy",
+                "document": "Öğrenci Kulüpleri Yönergesi",
+                "question": "Bir öğrenci, üniversitede birden fazla kulübe üye olabilir mi?",
+                "answer": "Evet. Bir öğrencinin birden fazla öğrenci kulübüne üye olmasında bir kısıtlama yoktur. Ancak sadece bir kulüpte başkanlık yapabilir.",
+                "reference": "Öğrenci Kulüpleri Yönergesi, Üyelik"
+              },
+              {
+                "id": "Q73",
+                "type": "reasoning",
+                "difficulty": "medium",
+                "document": "Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar",
+                "question": "Trafik kazası geçiren bir öğrenci, mazereti kabul edildiğinde, raporlu olduğu günlerdeki dersler için 'devamlı' sayılır mı?",
+                "answer": "Hayır. Haklı ve geçerli mazereti kabul edilen öğrenciye, kaçırdığı sınavlar için mazeret sınavı hakkı tanınır ancak raporlu/mazeretli olduğu süreler devamsızlıktan düşülmez, o günlerde devamsız (yok) yazılır.",
+                "reference": "Haklı ve Geçerli Nedenler Esasları"
+              },
+              {
+                "id": "Q74",
+                "type": "factual",
+                "difficulty": "easy",
+                "document": "Kariyer Gelişimi ve Öğrenci Destek Birimi Yönergesi",
+                "question": "Üniversitedeki kısmi zamanlı (part-time) öğrenci çalışma imkanları hakkında hangi birimden bilgi alınabilir?",
+                "answer": "Kısmi zamanlı çalışma imkanları, staj ve iş ilanları konularında Kariyer Gelişimi ve Öğrenci Destek Birimi'nden (KAGEM) bilgi ve danışmanlık alınabilir.",
+                "reference": "KAGEM Yönergesi, Birimin Görevleri"
+              },
+              {
+                "id": "Q75",
+                "type": "edge_case",
+                "difficulty": "hard",
+                "document": "Yurt Dışından Kabul Edilecek Öğrenciler Yönergesi",
+                "question": "Doğumla Türk vatandaşı olup daha sonra çıkma izni alarak yabancı bir devlet vatandaşlığına geçenler (Mavi Kart sahipleri) uluslararası öğrenci kontenjanından başvurabilir mi?",
+                "answer": "Evet, Türk vatandaşlığından çıkma izni almak suretiyle Mavi Kart sahibi olan adaylar, uluslararası (yabancı uyruklu) öğrenci kabul kontenjanlarına başvurma hakkına sahiptir.",
+                "reference": "Yurt Dışından Kabul Edilecek Öğrenciler Yönergesi, Başvuru Şartları"
+              },
+              {
+                "id": "Q76",
+                "type": "multi_hop",
+                "difficulty": "hard",
+                "document": "Yaz Okulu Esasları & Tek Ders Sınavı Esasları",
+                "question": "Bahar döneminde FF ile kaldığı dersi yaz okulunda alan ve yine FF ile kalan bir öğrenci, yaz okulu bittikten sonra bu ders için tek ders sınavına girebilir mi?",
+                "answer": "Evet, girebilir. Yaz okulu sonunda mezuniyeti için sadece bir dersi kalan öğrenci, ilgili şartları (daha önce dersi alıp devam şartını sağlamış olma) taşıyorsa yaz okulu sonrasında açılan tek ders sınavına girebilir.",
+                "reference": "Yaz Okulu Esasları & Tek Ders Sınav Esasları"
+              },
+              {
+                "id": "Q77",
+                "type": "factual",
+                "difficulty": "easy",
+                "document": "ESTÜ Sürekli Eğitim Merkezi (ESTÜSEM) Yönetmeliği",
+                "question": "ESTÜSEM tarafından düzenlenen eğitim programlarına sadece ESTÜ öğrencileri ve personeli mi katılabilir?",
+                "answer": "Hayır. ESTÜSEM eğitimleri, üniversite içi katılımcıların yanı sıra kamu kurumlarına, özel sektöre ve toplumun tüm kesimlerine (ücretli veya ücretsiz olarak) açıktır.",
+                "reference": "ESTÜSEM Yönetmeliği, Faaliyet Alanları"
+              },
+              {
+                "id": "Q78",
+                "type": "reasoning",
+                "difficulty": "medium",
+                "document": "Proje Temelli Staj Yönergesi",
+                "question": "Proje Temelli Staj (PTS) dersinin değerlendirmesi, öğrencinin not ortalamasını (GNO) etkileyen bir harf notu (AA, BA vb.) ile mi yapılır?",
+                "answer": "Hayır. Proje Temelli Staj değerlendirmeleri harf notu ile değil, genellikle Başarılı (YT - Yeterli) veya Başarısız (YZ - Yetersiz) olarak notlandırılır ve GNO (Genel Not Ortalaması) hesaplamasına katılmaz.",
+                "reference": "Proje Temelli Staj Yönergesi, Değerlendirme"
+              },
+              {
+                "id": "Q79",
+                "type": "comparison",
+                "difficulty": "hard",
+                "document": "Yabancı Dil Eğitim Yönetmeliği & Sınav Yönetmeliği",
+                "question": "Öğretim dili %30 İngilizce olan bir programda, hazırlık sınıfında iki yıl başarısız olan öğrenci üniversiteden atılır mı?",
+                "answer": "Eğitim dili tamamen (%100) yabancı dil olan programlarda ilişiği kesilirken; eğitim dili %30 yabancı dil olan programlarda öğrencinin ilişiği kesilmez, lisans eğitimine başlar ancak mezun olana kadar yabancı dil yeterliliğini sağlamak zorundadır.",
+                "reference": "Yabancı Dil Eğitim Yönetmeliği, %30 İngilizce Programlar"
+              },
+              {
+                "id": "Q80",
+                "type": "edge_case",
+                "difficulty": "medium",
+                "document": "Azami Süre Sonunda Mezun Olamayan Öğrencilere Verilen Ek Sınav Esasları",
+                "question": "Azami süresi dolduğu için ek sınav hakkı tanınan bir öğrenci, sınav günü sınava girmezse mazeret sınavı talep edebilir mi?",
+                "answer": "Hayır. Ek sınav haklarında genellikle mazeret sınavı uygulanmaz. Hakkı tanınan sınava girmeyen öğrenci, o sınav hakkını kullanmış sayılır ve sınav notu (0) sıfır olarak değerlendirilir.",
+                "reference": "Ek Sınav Esasları"
+              },
+              {
+                "id": "Q81",
+                "type": "factual",
+                "difficulty": "medium",
+                "document": "ESTÜ Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+                "question": "Sınav kağıdına yapılan 'maddi hata' itirazı bölüm başkanlığı tarafından reddedilen öğrenci, tekrar itiraz edebilir mi?",
+                "answer": "Öğrenci, bölüm başkanlığının sonucuna karşılık Fakülte Yönetim Kurulu'na başvurabilir. İlgili yönetim kurulu gerekirse dersin öğretim elemanı dışında farklı öğretim üyelerinden bir komisyon kurarak kağıdı yeniden inceletebilir.",
+                "reference": "Sınav Yönetmeliği, Maddi Hata İtirazı"
+              },
+              {
+                "id": "Q82",
+                "type": "multi_hop",
+                "difficulty": "medium",
+                "document": "Öğrenci Konseyleri Yönetmeliği & Öğrenci Kulüpleri Yönergesi",
+                "question": "Uzaklaştırma cezası (disiplin cezası) alan bir öğrenci, bir öğrenci kulübünün yönetim kuruluna veya bölüm öğrenci temsilciliğine seçilebilir mi?",
+                "answer": "Hayır, seçilemez. Hem Öğrenci Kulüpleri Yönergesi hem de Öğrenci Konseyleri Yönetmeliği gereğince, yönetim kurullarında görev almak veya aday olabilmek için herhangi bir disiplin cezası almamış olma şartı vardır.",
+                "reference": "İlgili Yönergelerin 'Adaylık Şartları' bölümleri"
+              },
+              {
+                "id": "Q83",
+                "type": "reasoning",
+                "difficulty": "medium",
+                "document": "Kredili ve Mutlak Sistemdeki Not Karşılıkları",
+                "question": "Lisans programından mezun olabilmek için öğrencinin tüm derslerini geçmiş olması yeterli midir, GNO alt sınırı var mıdır?",
+                "answer": "Tüm dersleri geçmek tek başına yeterli değildir. Öğrencinin mezun olabilmesi için Genel Not Ortalamasının (GNO) 4.00 üzerinden en az 2.00 (CC eşdeğeri) olması zorunludur.",
+                "reference": "Sınav Yönetmeliği & Not Karşılıkları"
+              },
+              {
+                "id": "Q84",
+                "type": "factual",
+                "difficulty": "easy",
+                "document": "Quickstart_Guide_BIM437_BIM444_25_26",
+                "question": "Bilgisayar Mühendisliği Bölümü bitirme projesi (BIM 437/444) kapsamında yazılacak olan Final Raporu hangi dilde hazırlanmalıdır?",
+                "answer": "Proje, %100 İngilizce eğitim veren Bilgisayar Mühendisliği programı kapsamında olduğu için Final Raporu ve tüm proje sunumları İngilizce dilinde hazırlanmalıdır.",
+                "reference": "Quickstart Guide BIM437/BIM444"
+              },
+              {
+                "id": "Q85",
+                "type": "edge_case",
+                "difficulty": "hard",
+                "document": "Sınav Yönetmeliği (ÇAP Hükümleri)",
+                "question": "Çift anadal (ÇAP) yapan bir öğrenci, sadece ikinci anadal programındaki kaydını dondurup anadal eğitimine devam edebilir mi?",
+                "answer": "Hayır. Kayıt dondurma işlemi (izinli sayılma) öğrencinin üniversitedeki genel statüsüyle ilgilidir. Anadal programında kaydı dondurulan öğrencinin ÇAP kaydı da otomatik olarak dondurulur, ayrı ayrı işlem yapılamaz.",
+                "reference": "Sınav Yönetmeliği, ÇAP Öğrencilerinin İzinli Sayılması"
+              },
+              {
+                "id": "Q86",
+                "type": "factual",
+                "difficulty": "medium",
+                "document": "Mühendislik Fakültesi Staj Yönergesi",
+                "question": "Yaz stajını tamamlayan bir öğrenci, staj defteri ve raporunu kuruma ne zaman teslim etmelidir?",
+                "answer": "Öğrenciler staj defteri ve stajyer değerlendirme formunu, stajı takip eden akademik yarıyılın başlangıcından itibaren bölüm başkanlığınca ilan edilen süre içinde (genellikle ilk bir ay) teslim etmek zorundadır.",
+                "reference": "Staj Yönergesi, Staj Evraklarının Teslimi"
+              },
+              {
+                "id": "Q87",
+                "type": "comparison",
+                "difficulty": "medium",
+                "document": "Ortak Dersler Uygulama Esasları",
+                "question": "Ortak zorunlu dersler olan Türk Dili (TÜR) ve Atatürk İlkeleri (TAR) derslerinin eğitimi, bölümdeki alan dersleri gibi yüz yüze mi yapılır?",
+                "answer": "Ortak zorunlu dersler (5i dersleri) çoğunlukla Üniversitenin Uzaktan Eğitim sistemi üzerinden asenkron (çevrimiçi) veya senkron olarak verilir, bölüm dersleri gibi fiziksel sınıf ortamında zorunlu olarak işlenmeyebilir.",
+                "reference": "Ortak Dersler Uygulama Esasları"
+              },
+              {
+                "id": "Q88",
+                "type": "reasoning",
+                "difficulty": "medium",
+                "document": "Uluslararası Değişim Programları Yabancı Dil Sınavı Esasları",
+                "question": "Erasmus yabancı dil sınavından 95 alan bir öğrenci, başvuruda kesinlikle seçilme garantisine sahip midir?",
+                "answer": "Hayır. Erasmus ve değişim programlarında yerleştirme puanı sadece dil puanı ile belirlenmez. Genellikle %50 Genel Not Ortalaması (GNO) ve %50 Yabancı Dil puanı toplanarak bir sıralama (Erasmus Puanı) oluşturulur. Kesinlik için sıralamaya girmesi gerekir.",
+                "reference": "Değişim Programları Değerlendirme Kriterleri"
+              },
+              {
+                "id": "Q89",
+                "type": "multi_hop",
+                "difficulty": "hard",
+                "document": "Staj Yönergesi & Yaz Okulu Esasları",
+                "question": "Yaz okulunda sadece sabah saatlerinde dersi olan bir öğrenci, öğleden sonraları firmaya giderek zorunlu yaz stajını yapabilir mi?",
+                "answer": "Hayır. Yönetmeliklere göre öğrenci, eğitim-öğretim dönemleri (yaz okulu dâhil) ve sınav haftalarında zorunlu staj yapamaz. Staj tarihlerinin ders/sınav dönemleri ile hiçbir şekilde kesişmemesi esastır.",
+                "reference": "Staj Yönergesi, Staj Dönemi ve Süresi"
+              },
+              {
+                "id": "Q90",
+                "type": "factual",
+                "difficulty": "easy",
+                "document": "Diploma, Diploma Eki Yönergesi",
+                "question": "Diploma Eki (Diploma Supplement) belgesi mezunlara hangi dilde verilir?",
+                "answer": "Diploma Eki, uluslararası akademik ve mesleki tanınırlığı sağlamak amacıyla İngilizce dilinde (yaygın bir Avrupa dilinde) düzenlenerek diplomayla birlikte verilir.",
+                "reference": "Diploma Eki Düzenleme Yönergesi"
+              },
+              {
+                "id": "Q91",
+                "type": "edge_case",
+                "difficulty": "medium",
+                "document": "Haklı ve Geçerli Nedenler Esasları",
+                "question": "Ara sınav (vize) haftasında gözaltına alınan veya tutuklanan ve daha sonra beraat eden bir öğrenci, giremediği sınavlar için mazeret hakkı talep edebilir mi?",
+                "answer": "Evet. Öğrencinin tutukluluk veya gözaltı hali gibi mücbir sebepler resmi makamlarca belgelendirildiği takdirde, ilgili kurul kararıyla haklı ve geçerli mazeret olarak kabul edilir ve mazeret sınavı hakkı tanınır.",
+                "reference": "Haklı ve Geçerli Nedenler Esasları"
+              },
+              {
+                "id": "Q92",
+                "type": "comparison",
+                "difficulty": "hard",
+                "document": "2547 Sayılı Yükseköğretim Kanunu & Sınav Yönetmeliği",
+                "question": "Lisans programları için belirlenen 7 yıllık 'azami öğrenim süresi' hesaplanırken, yaz okullarında geçen süreler bu yedi yıla dâhil edilir mi?",
+                "answer": "Hayır. Azami öğrenim süresi yarıyıl (Güz ve Bahar) bazında hesaplanır. Yaz okullarında geçirilen süreler azami öğrenim süresine dâhil edilmez.",
+                "reference": "Azami Süre ve Eğitim Yönetmeliği"
+              },
+              {
+                "id": "Q93",
+                "type": "factual",
+                "difficulty": "medium",
+                "document": "2547 Sayılı Yükseköğretim Kanunu",
+                "question": "Üniversitelerde Profesör, Doçent ve Doktor Öğretim Üyesi kadrolarında görev yapan akademisyenler genel kanunda hangi ortak isimle anılırlar?",
+                "answer": "Bu akademik unvanlara sahip olan kişiler kanunda genel olarak 'Öğretim Üyeleri' (Faculty Members) sıfatıyla anılırlar.",
+                "reference": "2547 Sayılı Kanun, Tanımlar (Madde 3)"
+              },
+              {
+                "id": "Q94",
+                "type": "reasoning",
+                "difficulty": "medium",
+                "document": "Tek Ders Sınavı Uygulama Esasları",
+                "question": "Tek ders sınavına girilecek olan ders 'Ağ Güvenliği Laboratuvarı' gibi tamamen uygulamalı bir ders ise, sınav kesinlikle kâğıt üzerinde (yazılı) mi yapılmalıdır?",
+                "answer": "Hayır. Tek ders sınavının uygulanış biçimi (yazılı, sözlü veya uygulamalı/pratik) dersin doğasına uygun olarak dersi veren öğretim elemanı tarafından belirlenir.",
+                "reference": "Tek Ders Sınavı Uygulama Esasları"
+              },
+              {
+                "id": "Q95",
+                "type": "factual",
+                "difficulty": "easy",
+                "document": "Önlisans ve Lisans Programlarına Yatay Geçiş Yönergesi",
+                "question": "Yurt dışındaki bir üniversitede (örneğin Almanya'da) lisans eğitimi alan T.C. vatandaşı bir öğrenci, ESTÜ'ye yatay geçiş yapabilir mi?",
+                "answer": "Evet, üniversitenin Yurt Dışı Kurumlararası Yatay Geçiş kontenjanı açması durumunda, gerekli başarı puanı ve denkliği sağlayan öğrenciler yurt dışından yatay geçiş başvurusunda bulunabilirler.",
+                "reference": "Yatay Geçiş Yönergesi, Yurt Dışı Kontenjanları"
+              },
+              {
+                "id": "Q96",
+                "type": "edge_case",
+                "difficulty": "hard",
+                "document": "Quickstart_Guide_BIM437_BIM444_25_26",
+                "question": "BIM 444 Bitirme Projesi teslim tarihinde, projeyi henüz bitiremediğini ama 1 hafta daha verilirse tamamlayacağını söyleyen öğrenciye bu ek süre verilebilir mi?",
+                "answer": "Akademik takvime ve kılavuza göre projeler belirlenen tarihte teslim edilmeli ve sunulmalıdır. Öğrencinin 'Eksik' (I - Incomplete) notu alıp ek süre alabilmesi, yalnızca geçerli ve belgelenmiş bir mazereti varsa ve bölüm onayıyla mümkündür, keyfi süre uzatımı yapılamaz.",
+                "reference": "Quickstart Guide BIM437/BIM444 & Genel Sınav Yönt."
+              },
+              {
+                "id": "Q97",
+                "type": "multi_hop",
+                "difficulty": "hard",
+                "document": "Öğrenci Kulüpleri Yönergesi & KAGEM Yönergesi",
+                "question": "Bilgisayar Kulübü öğrencileri üniversitede bir 'Yazılım Kariyer Fuarı' düzenlemek isterlerse, dış firmalarla iletişim kurmadan önce hangi birimlerle koordinasyon kurmalıdır?",
+                "answer": "Öğrenci kulüpleri bu tarz büyük çaplı kariyer etkinlikleri ve dış sponsorluk süreçleri için öncelikle kendi Kulüp Akademik Danışmanları ve üniversitenin Kariyer Gelişimi ve Öğrenci Destek Birimi (KAGEM) ile resmi olarak koordinasyon sağlamalıdır.",
+                "reference": "Kulüpler Yönergesi Etkinlik Düzenleme & KAGEM Görevleri"
+              },
+              {
+                "id": "Q98",
+                "type": "factual",
+                "difficulty": "medium",
+                "document": "Akademik Danışmanlık Yönergesi",
+                "question": "Bir öğrenci, atanan Akademik Danışmanından memnun değilse değişiklik talep edebilir mi?",
+                "answer": "Evet. Öğrenci, haklı gerekçelerini belirten bir dilekçe ile Bölüm Başkanlığına başvurabilir. Bölüm Başkanlığı gerekli görürse yönetim kurulu kararıyla akademik danışman değişikliği yapabilir.",
+                "reference": "Akademik Danışmanlık Yönergesi"
+              },
+              {
+                "id": "Q99",
+                "type": "reasoning",
+                "difficulty": "medium",
+                "document": "ESTÜ Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+                "question": "O dönem aldığı tüm dersleri harf notu ile geçen ve dönem not ortalaması (YNO) 3.65 olan, ancak geçmişte uyarı cezası (disiplin) almış bir öğrenci 'Yüksek Onur' belgesi alabilir mi?",
+                "answer": "Hayır, alamaz. Onur ve Yüksek Onur öğrencisi sayılabilmek için not ortalamasının (3.00-3.49 arası Onur, 3.50-4.00 Yüksek Onur) yetmesinin yanı sıra, öğrencinin öğrenim süresi boyunca hiçbir disiplin cezası almamış olması gereklidir.",
+                "reference": "Sınav Yönetmeliği, Başarılı Öğrenciler (Onur/Yüksek Onur)"
+              },
+              {
+                "id": "Q100",
+                "type": "edge_case",
+                "difficulty": "hard",
+                "document": "Haklı ve Geçerli Nedenler Esasları",
+                "question": "Ara sınavı kaçırıp mazeret sınavı hakkı elde eden, ancak mazeret sınavının yapılacağı gün de hastanelik olup rapor alan öğrenciye 'İkinci bir mazeret sınavı' hakkı verilir mi?",
+                "answer": "Hayır. Yükseköğretim kurallarında genel ilke olarak 'Mazeret sınavının mazereti (telafisi) yapılmaz'. Sınava girmeyen öğrenci o dersten (0) not almış sayılır.",
+                "reference": "Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar"
+              }
+            
+          
+  ]
+}
