@@ -2,6 +2,9 @@ import { useState, useRef, useEffect } from 'react'
 import { Send, AlertTriangle, FileText, Plus, Trash2, MessageSquare } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 import api from '../services/api'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm' // GitHub Flavored Markdown eklentisi
+import 'github-markdown-css/github-markdown.css' // GitHub CSS'i
 
 const WELCOME_MSG = {
   id: 'welcome',
@@ -225,12 +228,37 @@ export default function ChatPage() {
                     : 'bg-blue-500/10 text-blue-500 border border-blue-500/20'}`}>
                   {msg.role === 'assistant' ? 'AI' : (user?.full_name?.[0] || 'S')}
                 </div>
-                <div className={`max-w-[85%] px-3.5 py-2.5 rounded-xl text-[13.5px] font-sans leading-relaxed whitespace-pre-wrap
+                
+                {/* --- GitHub Stili Markdown Entegrasyonu Başlangıcı --- */}
+                <div className={`max-w-[85%] px-3.5 py-2.5 rounded-xl text-[13.5px] font-sans leading-relaxed
                   ${msg.role === 'assistant'
                     ? 'bg-bg-card border border-border-subtle text-text-main rounded-tl-sm'
-                    : 'bg-estu-red text-white rounded-tr-sm'}`}>
-                  {msg.content}
+                    : 'bg-estu-red text-white rounded-tr-sm whitespace-pre-wrap'}`}>
+                  
+                  {msg.role === 'assistant' ? (
+                    /* DÜZELTME: 'markdown-body' sınıfı GitHub stilini aktifleştirir */
+                    /* style{{}} ile tasarımın bozmaması için padding ve yazı boyutunu sıfırladık */
+                    <div 
+                      className="markdown-body" 
+                      style={{ 
+                        padding: '0', 
+                        fontSize: 'inherit', 
+                        color: 'inherit', 
+                        backgroundColor: 'transparent' 
+                      }}
+                    >
+                      <ReactMarkdown 
+                        remarkPlugins={[remarkGfm]} // Tablolar, kontrol listeleri vs. için
+                      >
+                        {msg.content}
+                      </ReactMarkdown>
+                    </div>
+                  ) : (
+                    msg.content
+                  )}
                 </div>
+                {/* --- GitHub Stili Markdown Entegrasyonu Sonu --- */}
+                
               </div>
 
               {msg.sources && msg.sources.length > 0 && (

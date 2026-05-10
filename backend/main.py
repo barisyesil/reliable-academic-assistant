@@ -29,11 +29,8 @@ async def lifespan(app: FastAPI):
     from langchain_core.globals import set_llm_cache
 
     set_llm_cache(SQLiteCache(database_path=".langchain_cache.db"))
-    llm = ChatGroq(
-        groq_api_key=settings.GROQ_API_KEY,
-        model_name="llama-3.3-70b-versatile",
-        temperature=0.1,
-    )
+    base_llm = ChatGroq(groq_api_key=settings.GROQ_API_KEY, model_name="qwen/qwen3-32b", temperature=0, max_retries=2)
+    llm = base_llm.bind(parallel_tool_calls=False)
 
     # Chat router'a LLM'i ver
     from app.api.chat import set_llm
