@@ -1,0 +1,302 @@
+[
+  {
+    "question": "Mühendislik Fakültesi öğrencilerinin toplam zorunlu staj süresi kaç gündür?",
+    "ground_truth": "Mühendislik Fakültesi Staj Yönergesi'nin 8. maddesi uyarınca toplam staj süresi 40 (kırk) günden az olamaz. Staja devam zorunludur; geçerli mazeretler nedeniyle devam edilemeyen günler telafi edilir; ancak bu günler toplam zorunlu staj süresinin %10'unu geçemez.",
+    "context_reference": "Eskişehir Teknik Üniversitesi Mühendislik Fakültesi Staj Yönergesi, Madde 8",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Yaz okulunda bir öğrenci en fazla kaç AKTS kredilik derse kayıt yaptırabilir?",
+    "ground_truth": "Yaz Okulu Uygulama Esasları'nın 9. maddesi uyarınca öğrenci, yaz okulunda açılan derslerden en çok 20 AKTS kredilik derse kayıt yaptırabilir. Bununla birlikte, yaz okulu sonu itibarıyla mezuniyet aşamasındaki öğrenci en fazla 25 AKTS kredilik derse kayıt yaptırabilir. Bu kredilere diğer yükseköğretim kurumlarından alınan ders kredileri de dahil edilir.",
+    "context_reference": "Eskişehir Teknik Üniversitesi Yaz Okulu Uygulama Esasları, Madde 9",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Tek ders sınavına girebilmek için öğrencinin hangi koşulları sağlaması gerekmektedir?",
+    "ground_truth": "Tek Ders Sınavı Uygulama Esasları uyarınca tek ders sınavından yararlanabilmek için öğrencinin: (1) devam koşulunu yerine getirmiş olduğu tek dersten FF veya YZ harf notu almış olması, (2) mezun olabilecek durumda bulunması gerekmektedir. Öğrenci, daha önce almadığı veya devamsızlıktan kaldığı bir dersten ya da not yükseltmek amacıyla tek ders sınavına giremez. Ayrıca tümüyle uygulamalı dersler ve dönem sonu sınavı uygulamalı olarak yapılan dersler için tek ders sınavı yapılmaz.",
+    "context_reference": "Eskişehir Teknik Üniversitesi Tek Ders Sınavı Uygulama Esasları, Maddeler 1 ve 6",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Kurum içi yatay geçiş başvurusunda bulunabilmek için gerekli GNO şartı nedir?",
+    "ground_truth": "Yatay Geçiş Yönergesi'nin 8. maddesi (b) fıkrası uyarınca kurum içi yatay geçiş için öğrencinin ayrılacağı programdaki derslerinin tümünü başarmış olması, GNO'sunun en az 3,00 olması ve disiplin cezası almamış olması gerekmektedir.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 8 (b)",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Yaz okulu süresi en az kaç haftadır ve uygulamalı dersler yaz okulunda açılabilir mi?",
+    "ground_truth": "Yaz Okulu Uygulama Esasları'na göre yaz okulunun süresi, ara sınavlar dahil olmak üzere en az 5 (beş) haftadır. Uygulamalı dersler ise yaz okulunda açılamaz.",
+    "context_reference": "Eskişehir Teknik Üniversitesi Yaz Okulu Uygulama Esasları, Maddeler 5 ve 7",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Haklı ve geçerli neden kapsamında kayıt dondurma talebinde bulunabilmek için ekonomik gerekçeyle başvuru ne zamana kadar yapılmalıdır?",
+    "ground_truth": "Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar'ın 3. maddesi (ç) fıkrası uyarınca ekonomik nedenlerle kayıt dondurma talebi, her yarıyılın en geç 4. haftası mesai bitimine kadar, öğrencinin durumunu belgeleyen belgelerle birlikte yapılmalıdır.",
+    "context_reference": "ESTÜ Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar, Madde 3 (ç)",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Çift anadal veya yandal programına kayıtlı bir öğrenciye kaç ayrı akademik danışman atanır?",
+    "ground_truth": "Akademik Danışmanlık Yönergesi'nin 5. maddesinin 5. fıkrası uyarınca çift anadal ve/veya yandal programlarına kayıt yaptıran öğrenciye, kayıtlı olduğu her program için ayrı ayrı akademik danışman atanır.",
+    "context_reference": "ESTÜ Akademik Danışmanlık Yönergesi, Madde 5 (5)",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Lisans programlarında öğrenciye tanınan azami öğrenim süresi kaç yarıyıldır?",
+    "ground_truth": "ESTÜ Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği'nin 6. maddesi uyarınca öğrencilere öğrenimlerini tamamlamaları için tanınan program süresi, yabancı dil hazırlık sınıfı hariç, 4 yıllık lisans programları için 8 yarıyıldır. Öğrencinin kayıt yaptırmaması veya yenilememesi azami öğrenim süresinin işlemesini durdurmaz.",
+    "context_reference": "ESTÜ Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği, Madde 6",
+    "question_type": "Simple"
+  },
+  {
+    "question": "ESTÜ Erasmus Dil Sınavı'nın ikinci aşamasına katılabilmek için birinci aşamadan kaç puan almak gerekir?",
+    "ground_truth": "Uluslararası Değişim Programları Yabancı Dil Sınavı Uygulama Usul ve Esasları'nın 6. maddesine ait tabloya göre birinci aşamadan 100 üzerinden 60 puan ve üzeri alanlar ikinci aşamaya alınır. Bunun yanı sıra YDS, e-YDS, YÖKDİL ve e-YÖKDİL sınavlarından en az 60 puan veya e-TEP sınavından en az 50 puan alan öğrenciler de ikinci aşamaya doğrudan katılabilir.",
+    "context_reference": "ESTÜ Uluslararası Değişim Programları Yabancı Dil Sınavı Uygulama Usul ve Esasları, Tablo 2",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Staj yapacak öğrencinin staj başvurusunu staj başlangıç tarihinden en az kaç gün önce yapması gerekmektedir?",
+    "ground_truth": "Mühendislik Fakültesi Staj Yönergesi'nin 10. maddesinin 2. fıkrası uyarınca öğrenci, staj başlangıç tarihinden en az 15 gün önce 'Öğrenci Staj Başvuru ve Kabul Formu'nu doldurarak Bölüm Staj Komisyonuna teslim etmek ve başvuru sürecini başlatmak zorundadır.",
+    "context_reference": "ESTÜ Mühendislik Fakültesi Staj Yönergesi, Madde 10 (2)",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Yatay geçişle mezun olabilmek için bir lisans öğrencisinin sağlaması gereken AKTS kredi şartı nedir ve bu öğrencinin GNO'su ne olmalıdır?",
+    "ground_truth": "Yatay Geçiş Yönergesi'nin 7. maddesinin 1. fıkrası (d) bendi uyarınca yatay geçişle gelen öğrencinin mezuniyet için lisans programında en az 240 AKTS ders kredisi alması, herhangi bir dersten FF, YZ ve DZ son harf notunun olmaması ve GNO'sunun en az 2,00 olması gerekmektedir. Bu krediler hesaplanırken hem önceki diploma programından hem de Eskişehir Teknik Üniversitesi'nden alınan derslerin harf notları kullanılarak GNO belirlenir.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 7 (1d)",
+    "question_type": "Multi-hop"
+  },
+  {
+    "question": "Bir öğrenci yaz okulunda ders alırken aynı zamanda zorunlu stajını yapabilir mi? Bu konudaki kuralları açıklayınız.",
+    "ground_truth": "Mühendislik Fakültesi Staj Yönergesi'nin 10. maddesi uyarınca staj esas olarak eğitim-öğretim faaliyetlerinin yapılmadığı yaz döneminde yapılır ve öğrenci eğitim-öğretime devam ettiği sürece, ekle-sil haftası ve sınav günleri dahil, staj yapamaz. Ancak yaz okulunda veya güz/bahar dönemlerinde hafta içi en az 3 (üç) tam iş günü ders yükümlülüğü olmayan öğrenci, stajını dersinin ve sınavının olmadığı günlerde yapmak koşuluyla bu kuralın dışında tutulur. Yaz Okulu Uygulama Esasları ise öğrencinin yaz okulu derslerine devam etmesini zorunlu kılmaktadır. Dolayısıyla yaz okulunda 3 veya daha fazla tam iş günü ders yükümlülüğü olan öğrenci zorunlu stajını yapamazken, hafta içi ders yükü bu sınırın altında kalan öğrenci dersinin ve sınavının olmadığı günlerde stajını sürdürebilir.",
+    "context_reference": "ESTÜ Mühendislik Fakültesi Staj Yönergesi, Madde 10; ESTÜ Yaz Okulu Uygulama Esasları",
+    "question_type": "Multi-hop"
+  },
+  {
+    "question": "Kurumlararası yatay geçiş başvurusu için aranan başarı şartları nelerdir ve bir öğrencinin daha önce FF notu aldığı bir dersi varsa başvurusu kabul edilir mi?",
+    "ground_truth": "Yatay Geçiş Yönergesi'nin 9. maddesinin 1. fıkrası (b) bendi uyarınca kurumlararası yatay geçiş için öğrencinin tamamlamış olduğu dönemlere ait GNO'sunun 100 üzerinden en az 76,66 (4'lük sistemde en az 3,00) olması, yatay geçiş yapacağı yarıyıla kadar ayrılacağı programdaki derslerinin tümünü normal süresi içinde başarmış olması ve disiplin cezası almamış olması gerekmektedir. FF, YZ, DZ ve benzeri başarısızlık harf notu olan öğrencilerin başvuruları değerlendirmeye alınmaz. Dolayısıyla daha önce herhangi bir dersten FF notu alan öğrencinin kurumlararası yatay geçiş başvurusu kabul edilmez.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 9 (1b)",
+    "question_type": "Multi-hop"
+  },
+  {
+    "question": "Staj değerlendirmesinde öğrencinin başarılı sayılabilmesi için işveren tarafından verilen değerlendirme notunun kaç olması gerekir ve bu not yeterli olmasa bile staj raporu teslim edilmeli midir?",
+    "ground_truth": "Mühendislik Fakültesi Staj Yönergesi'nin 14. maddesi uyarınca öğrencinin stajının başarılı kabul edilebilmesi için staj yapılan kurum/kuruluş tarafından doldurulan 'Kurum/Kuruluş Öğrenci Staj Değerlendirme Formu'ndaki değerlendirme notunun 5 (beş) üzerinden en az 3 (üç) olması ön koşuldur. Bu notun 3'ün altında olması durumunda öğrenci stajda başarısız sayılır. 'Kurum/Kuruluş Öğrenci Staj Değerlendirme Formu', 'Öğrenci Staj Raporu' ve stajla ilgili ek bilgi ve belgeler birlikte değerlendirmeye alınır; ancak işveren notunun 3'ün altında kalması halinde diğer belgeler ne olursa olsun öğrenci başarısız sayılır.",
+    "context_reference": "ESTÜ Mühendislik Fakültesi Staj Yönergesi, Madde 14 (1-2)",
+    "question_type": "Multi-hop"
+  },
+  {
+    "question": "Tek ders sınavından 80 puan alan bir öğrencinin harf notu ne olur ve bu öğrenci mezun olabilir mi?",
+    "ground_truth": "Tek Ders Sınavı Uygulama Esasları'nın 4. maddesi uyarınca oluşturulan mutlak sistem not dönüşüm tablosuna göre 77-83 puan aralığı AB harf notuna (katsayı 3,70) karşılık gelir. Bu nedenle 80 puan alan öğrenci AB harf notu alır. Tek ders sınavına girebilmek için öğrencinin mezun olabilecek durumda olması gerekmektedir; dolayısıyla diğer mezuniyet koşullarını sağlamış olan öğrenci, tek ders sınavından AB notu alarak mezuniyet engeli ortadan kalktığından mezun olabilir.",
+    "context_reference": "ESTÜ Tek Ders Sınavı Uygulama Esasları, Madde 4",
+    "question_type": "Multi-hop"
+  },
+  {
+    "question": "Yurt dışındaki bir üniversitede lisans öğrenimi gören bir öğrenci ESTÜ'ye kurumlararası yatay geçiş başvurusu yapabilir mi? Hangi ek şartlar aranır?",
+    "ground_truth": "Yatay Geçiş Yönergesi'nin 12. maddesi uyarınca yurt dışındaki yükseköğretim kurumlarından yatay geçiş ilkeleri şunlardır: Başarı sıralaması şartı aranan programlara yatay geçiş yapılabilmesi için öğrencinin yükseköğrenime başladığı yıl, kayıtlı olduğu üniversitenin Times Higher Education (THE), QS World University Rankings, ARWU veya CWTS Leiden Ranking gibi uluslararası sıralama kuruluşlarının en az üçünde ilk dört yüzlük dilim içerisinde yer alması ve yönergedeki dönem/sınıf ile başarı şartlarını taşıması gerekmektedir. İlk dört yüzlük dilim dışında kalan bir üniversitede kayıtlı öğrenci için ise ortaöğretimini Türkiye'de tamamlayanların merkezi yerleştirme sınavına girmiş ve ilgili puan türünde başarı sıralaması şartını sağlamış olması gerekir. Ayrıca 2025 yılında yapılan değişiklikle yurt dışında açık ve uzaktan eğitim gibi devam zorunluluğu bulunmayan programlarda öğrenimine devam eden öğrenciler yurt içindeki örgün öğretim programlarına yatay geçiş başvurusunda bulunamaz.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 12 (2)",
+    "question_type": "Multi-hop"
+  },
+  {
+    "question": "SGK'ya kayıtlı olarak çalışan bir öğrenci zorunlu stajından muaf tutulabilir mi? Muafiyet için hangi belgeler gereklidir ve aynı işyerinden kaç staj için muafiyet alınabilir?",
+    "ground_truth": "Mühendislik Fakültesi Staj Yönergesi'nin 15. maddesi (4. fıkrası) uyarınca staj yapma koşullarını sağlayan ve ilgili sektörde SGK'ya kayıtlı olarak çalışan öğrenci; zorunlu staj süresi kadar çalıştığını belgelendirmesi durumunda, işyerinde yaptığı çalışmalarla ilgili Bölüm Staj Komisyonu'nun öngördüğü Staj Raporunu teslim etmek koşuluyla Bölüm Staj Komisyonunun önerisi üzerine Yönetim Kurulu kararıyla stajdan muaf tutulabilir. Ancak öğrenci aynı işyerindeki çalışması dolayısıyla birden fazla stajdan muaf tutulamaz; yani bir işyeri en fazla bir zorunlu staj için muafiyet gerekçesi oluşturabilir.",
+    "context_reference": "ESTÜ Mühendislik Fakültesi Staj Yönergesi, Madde 15 (4)",
+    "question_type": "Multi-hop"
+  },
+  {
+    "question": "Akademik danışmanın kayıt dönemi sürecindeki temel görev ve sorumlulukları nelerdir?",
+    "ground_truth": "Akademik Danışmanlık Yönergesi'nin 4. ve 6. maddelerine göre akademik danışmanın kayıt yenileme ve ders seçimi sürecindeki temel görev ve sorumlulukları şunlardır: öğrencinin üniversite yaşamına uyum, mesleki gelişim ve kariyer konularında yönlendirmek; öğrenimleri süresince izlemek; her yarıyıl başında ders seçimi sürecinde bilgilendirmek; öğrencinin akademik durumunu birlikte değerlendirerek alması gereken derslere onay vermek; ön koşullu derslerin kontrolünü yapmak ve kayıt yenileme onayı ile ders seçim onayını sisteme işlemek.",
+    "context_reference": "ESTÜ Akademik Danışmanlık Yönergesi, Maddeler 4 ve 6",
+    "question_type": "Simple"
+  },
+  {
+    "question": "GNO'su 2,80 olan ve derslerinin tümünü başarmış bir Bilgisayar Mühendisliği öğrencisi, aynı fakülte içinde başka bir bölüme (kurum içi yatay geçiş) başvurabilir mi?",
+    "ground_truth": "Hayır, bu öğrenci kurum içi yatay geçiş başvurusunda bulunamaz. Yatay Geçiş Yönergesi'nin 8. maddesinin 1. fıkrası (b) bendi uyarınca kurum içi yatay geçiş için öğrencinin GNO'sunun en az 3,00 olması zorunludur. Öğrencinin GNO'su 2,80 olduğundan bu şartı karşılamamaktadır. Derslerin tümünü başarmış olma ve disiplin cezası almamış olma koşulları tek başına yeterli değildir; GNO şartı da birlikte sağlanmalıdır.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 8 (1b)",
+    "question_type": "Agentic"
+  },
+  {
+    "question": "Bilgisayar Mühendisliği bölümünde 3. sınıf öğrencisi olan ve 4. yarıyılı başarıyla tamamlamış Ahmet, sadece bir dersten FF notu almıştır. Diğer tüm derslerini başarmış ve GNO'su 3,10'dur. Ahmet kurumlararası yatay geçiş başvurusu yapabilir mi?",
+    "ground_truth": "Hayır, Ahmet kurumlararası yatay geçiş başvurusu yapamaz. Yatay Geçiş Yönergesi'nin 9. maddesinin 1. fıkrası (b) bendi uyarınca kurumlararası yatay geçiş için öğrencinin yatay geçiş yapacağı yarıyıla kadar ayrılacağı programdaki derslerinin tümünü normal süresi içinde başarmış olması gerekmektedir. FF, YZ, DZ ve benzeri başarısızlık (harf) notu olan öğrencilerin başvuruları değerlendirmeye alınmaz. Ahmet'in bir dersten FF notu almış olması, GNO'su 3,10 olsa dahi başvurusunun reddedilmesine yol açar.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 9 (1b)",
+    "question_type": "Agentic"
+  },
+  {
+    "question": "Ayşe, mezuniyet için gerekli tüm derslerini tamamlamış ve yalnızca bir seçmeli dersten YZ harf notu bulunmaktadır. Bu dersi daha önce aldığında devam koşulunu yerine getirmiştir. Ayşe tek ders sınavına başvurabilir mi ve başvurusu nasıl yapılır?",
+    "ground_truth": "Evet, Ayşe tek ders sınavına başvurabilir. Tek Ders Sınavı Uygulama Esasları'nın 1. maddesi uyarınca devam koşulunu yerine getirmiş olduğu tek dersten FF veya YZ harf notu alan ve mezun olabilecek durumdaki öğrenci bu sınavdan yararlanabilir. Ayşe hem YZ harf notu almış hem de devam koşulunu sağlamış hem de tek kalan dersi olan bu ders nedeniyle mezun olabilecek durumdadır. Başvuru için birimler tarafından ilan edilen başvuru tarihleri içinde kayıtlı olduğu birime, akademik danışmanının da görüşünün yer aldığı bir dilekçeyle (EK-1 formunu kullanarak) başvurması, ardından ilgili birim yönetim kurulu kararıyla sınava alınması gerekmektedir.",
+    "context_reference": "ESTÜ Tek Ders Sınavı Uygulama Esasları, Maddeler 1 ve 2",
+    "question_type": "Agentic"
+  },
+  {
+    "question": "Mehmet, 5. yarıyılda olup hafta içi toplam 2 tam iş günü ders yükümlülüğü bulunmaktadır. Yaz okulu sürecinde derslerinin olmadığı günlerde zorunlu staj yapabilir mi?",
+    "ground_truth": "Evet, Mehmet yaz okulunda derslerinin olmadığı günlerde zorunlu stajını yapabilir. Mühendislik Fakültesi Staj Yönergesi'nin 10. maddesinin 1. fıkrası uyarınca yaz okulunda veya güz/bahar dönemlerinde hafta içi en az 3 (üç) tam iş günü ders yükümlülüğü olmayan öğrenci, stajını dersinin ve sınavının olmadığı günlerde yapmak koşuluyla genel kuralın dışında tutulur. Mehmet'in hafta içi yalnızca 2 tam iş günü ders yükümlülüğü bulunduğundan, bu eşiğin altında kalmakta ve dolayısıyla dersinin ve sınavının olmadığı günlerde zorunlu stajını sürdürebilmektedir.",
+    "context_reference": "ESTÜ Mühendislik Fakültesi Staj Yönergesi, Madde 10 (1)",
+    "question_type": "Agentic"
+  },
+  {
+    "question": "Mutlak sistemde bir öğrencinin not ortalaması 72 ise bu not 4'lük sistemde hangi harf notuna ve katsayısına karşılık gelir?",
+    "ground_truth": "Kredili ve Mutlak Sistemdeki Not Karşılıklarına İlişkin Uygulama Esasları'ndaki Tablo 1'e göre mutlak sistemde 71-76 puan aralığı, kredili sistemde BA harf notuna ve 3,30 katsayısına karşılık gelir. Dolayısıyla mutlak sistemde 72 alan bir öğrencinin notu, 4'lük kredili sistemde BA harf notu olarak dönüştürülür.",
+    "context_reference": "ESTÜ Kredili ve Mutlak Sistemdeki Not Karşılıklarına İlişkin Uygulama Esasları, Tablo 1",
+    "question_type": "Agentic"
+  },
+  {
+    "question": "Bilgisayar Mühendisliği 3. sınıf öğrencisi Zeynep'in GNO'su 3,20 olup derslerinin tümünü başarmıştır. Başka bir üniversitenin Bilgisayar Mühendisliği bölümüne kurumlararası yatay geçiş yapmasının önünde herhangi bir engel var mı ve yönergede bu yönde bir düzenleme bulunmakta mıdır?",
+    "ground_truth": "ESTÜ Yatay Geçiş Yönergesi yalnızca diğer kurumlardan ESTÜ'ye yapılacak yatay geçişleri düzenlemekte olup bir öğrencinin ESTÜ'den başka bir kuruma yatay geçişine ilişkin hükümler bu yönerge kapsamında yer almamaktadır. Kurumlararası yatay geçiş koşulları kapsamında; ESTÜ'ye başka kurumdan gelmek isteyen öğrenciler için GNO 76,66/100 (4'lük sistemde 3,00) ve tüm dersleri başarma koşulu aranmaktadır. Zeynep'in kendi durumu değerlendirildiğinde, ESTÜ bünyesinde kurum içi yatay geçiş için aranan GNO 3,00 şartını sağlamakta ve tüm derslerini başarmış bulunmaktadır. Ancak başka bir üniversiteye yatay geçiş, o üniversitenin kendi yönetmeliğine tabidir ve bu soru ESTÜ belgelerinin kapsamı dışındadır.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi",
+    "question_type": "Agentic"
+  },
+  {
+    "question": "Proje Temelli Staj (PTS) süresi kaç günden az ve kaç günden fazla olamaz? Bu süre, zorunlu stajlar için belirlenen süre ile karşılaştırıldığında nasıl farklılaşmaktadır?",
+    "ground_truth": "Mühendislik Fakültesi Staj Yönergesi'nin 8. maddesinin 2. fıkrası uyarınca Proje Temelli Staj (PTS) süresi 45 (kırk beş) günden az, 90 (doksan) günden fazla olamaz. Buna karşın zorunlu staj süresi aynı maddenin 1. fıkrasına göre toplam 40 (kırk) günden az olamaz ve üst sınır belirlenmemiştir. PTS, hem alt sınır (45 gün) hem de üst sınır (90 gün) bakımından zorunlu stajdan farklılaşmaktadır. Bölüm Staj Komisyonunun uygun görmesi halinde isteğe bağlı Proje Temelli Staj, zorunlu stajlardan birinin yerine sayılabilmektedir.",
+    "context_reference": "ESTÜ Mühendislik Fakültesi Staj Yönergesi, Madde 8 (1-2)",
+    "question_type": "Multi-hop"
+  },
+  {
+    "question": "Eskişehir'in en iyi üniversite yurdu hangisidir ve ESTÜ öğrencilerine özel indirim var mıdır?",
+    "ground_truth": "Bu sorunun yanıtı, yüklenen ESTÜ yönetmelik ve yönerge belgelerinin hiçbirinde yer almamaktadır. Söz konusu belgeler akademik süreçleri, staj uygulamalarını, yatay geçiş koşullarını ve sınav esaslarını kapsamaktadır. Yurt hizmetleri veya barınma konusunda destek almak için ESTÜ Öğrenci İşleri Daire Başkanlığı veya Sağlık, Kültür ve Spor Dairesi ile iletişime geçmeniz tavsiye edilir.",
+    "context_reference": "Kapsam dışı - belgeler arasında bu konuya ilişkin bilgi bulunmamaktadır.",
+    "question_type": "Out-of-Scope"
+  },
+  {
+    "question": "ESTÜ yemekhanesinin haftalık menüsü nedir?",
+    "ground_truth": "Bu sorunun yanıtı, yüklenen ESTÜ yönetmelik ve yönerge belgelerinde yer almamaktadır. Yemek menüsüne ilişkin bilgi almak için ESTÜ resmi web sitesini veya Sağlık, Kültür ve Spor Daire Başkanlığı sayfasını ziyaret etmeniz önerilir.",
+    "context_reference": "Kapsam dışı - belgeler arasında bu konuya ilişkin bilgi bulunmamaktadır.",
+    "question_type": "Out-of-Scope"
+  },
+  {
+    "question": "Mühendislik Fakültesi'ndeki hangi hocalar en iyi derse giriyor?",
+    "ground_truth": "Bu soruya yüklenen ESTÜ yönetmelik ve yönerge belgelerine dayanarak yanıt verilemez. Söz konusu belgeler öğretim elemanlarının performansı veya ders kalitesi hakkında herhangi bir değerlendirme içermemektedir. Bu tür kişisel görüşler için öğrenci toplulukları veya danışmanlık hizmetlerine başvurulabilir.",
+    "context_reference": "Kapsam dışı - belgeler arasında bu konuya ilişkin bilgi bulunmamaktadır.",
+    "question_type": "Out-of-Scope"
+  },
+  {
+    "question": "Staj için hangi şehirlerde iş imkânı bulabilirim? Belirli firmalar önerir misin?",
+    "ground_truth": "Bu sorunun yanıtı yüklenen ESTÜ belgelerinin kapsamı dışındadır. Mühendislik Fakültesi Staj Yönergesi, staj yerinin belirlenmesinin öğrencinin sorumluluğunda olduğunu belirtmekte ve Bölüm Staj Komisyonu ile Fakülte Staj Komisyonu'nun bu süreçte kolaylaştırıcı rol üstlenebileceğini ifade etmektedir. Belirli firma önerileri için Kariyer Gelişimi ve Öğrenci Destek Birimi'ne başvurmanız tavsiye edilir.",
+    "context_reference": "Kapsam dışı - belgeler arasında bu konuya ilişkin bilgi bulunmamaktadır.",
+    "question_type": "Out-of-Scope"
+  },
+  {
+    "question": "ChatGPT mi daha iyi yoksa ESTÜ Akademik Asistanı mı?",
+    "ground_truth": "Bu soru, yüklenen ESTÜ yönetmelik ve yönerge belgelerinin tamamen dışındadır. Akademik Asistan, ESTÜ'ye ait akademik mevzuat ve yönetmelikler hakkında bilgi vermek amacıyla tasarlanmış olup yapay zeka sistemleri arasında karşılaştırma yapma kapasitesi bu sistemin görev tanımında yer almamaktadır.",
+    "context_reference": "Kapsam dışı - belgeler arasında bu konuya ilişkin bilgi bulunmamaktadır.",
+    "question_type": "Out-of-Scope"
+  },
+  {
+    "question": "ESTÜ'de spor salonu üyeliği nasıl alınır ve üyelik ücretleri nedir?",
+    "ground_truth": "Bu sorunun yanıtı yüklenen ESTÜ yönetmelik ve yönerge belgelerinde yer almamaktadır. Spor tesisleri ve üyelik koşulları hakkında bilgi almak için ESTÜ Sağlık, Kültür ve Spor Daire Başkanlığı ile iletişime geçilmesi önerilir.",
+    "context_reference": "Kapsam dışı - belgeler arasında bu konuya ilişkin bilgi bulunmamaktadır.",
+    "question_type": "Out-of-Scope"
+  },
+  {
+    "question": "Yaz okulunda açılan bir dersten, dersler başladıktan sonra dersi bırakmak (çekilmek) mümkün müdür?",
+    "ground_truth": "Yaz Okulu Uygulama Esasları'nın 11. maddesi uyarınca yaz okulunda dersler başladıktan sonra ders ekle/sil ve çekilme işlemleri yapılamaz. Kayıtlar bittikten sonra yalnızca ilgili Birim Yönetim Kurulu'nun kabul ettiği haklı ve geçerli bir nedenle hatalı kayıt düzeltilebilir. Bunun için öğrencinin dilekçesini kayıtları takip eden ilk iş günü içinde ilgili birime vermesi gerekmektedir.",
+    "context_reference": "ESTÜ Yaz Okulu Uygulama Esasları, Madde 11",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Yabancı dil hazırlık programında zorunlu hazırlık sınıfından muaf olmak için öğrenci ne yapmalıdır?",
+    "ground_truth": "Yabancı Dil Hazırlık Programı Eğitim-Öğretim ve Sınav Yönetmeliği'nin 6. maddesi uyarınca zorunlu hazırlık programına dahil olan öğrenci, yabancı dil hazırlık programından muaf olmak ve/veya zorunlu ya da isteğe bağlı hazırlık programını başarıyla tamamlamış sayılmak için yabancı dil yeterlik sınavına girmek zorundadır. Bu sınav ESTÜ Yabancı Diller Yüksekokulu tarafından uygulanır.",
+    "context_reference": "ESTÜ Yabancı Dil Hazırlık Programı Eğitim-Öğretim ve Sınav Yönetmeliği, Madde 6",
+    "question_type": "Simple"
+  },
+  {
+    "question": "İkinci öğretim programında okuyan bir öğrenci, birinci öğretim programına kurum içi yatay geçiş yapabilir mi? Hangi şart altında yapabilir?",
+    "ground_truth": "Yatay Geçiş Yönergesi'nin 5. maddesinin 1. fıkrası (c) bendi uyarınca öğrenci, ikinci öğretim diploma programından sadece ikinci öğretim diploma programına yatay geçiş yapabilir. Ancak ikinci öğretim diploma programından bulunduğu sınıfın ilk %10'una girerek bir üst sınıfa geçen öğrenci, birinci öğretim diploma programlarına kontenjan dahilinde yatay geçiş yapabilir.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 5 (1c)",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Öğrenci kulübü kurabilmek için asgari kaç kurucu üye gerekmektedir ve geçici yönetim kurulu kaç üyeden oluşur?",
+    "ground_truth": "Öğrenci Kulüpleri Yönergesi'nin 4. maddesinde yapılan tanımlar çerçevesinde Geçici Yönetim Kurulu; kurulma aşamasında olan kulübün kurucu öğrencileri arasından belirlenen ve ilk Genel Kurula kadar görev yapan en az 5 (beş) üyeden oluşmaktadır. Dolayısıyla kulüp kurulabilmesi için en az 5 kurucu üye gerekmektedir.",
+    "context_reference": "ESTÜ Öğrenci Kulüpleri Yönergesi, Madde 4",
+    "question_type": "Simple"
+  },
+  {
+    "question": "GNO'su 3,10 olan ve tüm derslerini başarmış 3. yarıyıl öğrencisi Can, kurum içi yatay geçiş başvurusu yapmak istemektedir. Başvurusu kabul için değerlendirilecek midir?",
+    "ground_truth": "GNO şartı bakımından Can'ın durumu uygun görünmektedir; zira kurum içi yatay geçiş için en az 3,00 GNO şartı aranmakta ve Can 3,10 ortalamayla bu eşiği karşılamaktadır. Ayrıca tüm derslerini başarmış ve disiplin cezası almamış olduğu belirtilmiştir. Ancak Yatay Geçiş Yönergesi'nin 5. maddesi (a) fıkrası uyarınca lisans diploma programlarının ilk iki yarıyılına kurum içi yatay geçiş yapılamaz. 3. yarıyıl öğrencisi olan Can, 3. yarıyıla yatay geçiş istemektedir ve bu yarıyıl ilk iki yarıyıl yasağı kapsamında yer almamaktadır. Dolayısıyla Can'ın başvurusu kontenjan ve diğer koşullar dahilinde değerlendirmeye alınabilir.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 5 (1a) ve Madde 8 (1b)",
+    "question_type": "Agentic"
+  },
+  {
+    "question": "Bir öğrenci birden fazla farklı üniversitenin yaz okulundan ders alabilir mi? Bu durumda kredi sınırı nasıl uygulanır?",
+    "ground_truth": "Yaz Okulu Uygulama Esasları'nın 9. ve 16. maddelerine göre öğrenci, Üniversite Yönetim Kurulu kararıyla diğer yükseköğretim kurumlarının yaz okulundan ders alabilir. Kredi sınırı hesaplanırken diğer yükseköğretim kurumlarından alınan ders/derslerin kredileri de 20 AKTS (mezuniyet aşamasındaki öğrenciler için 25 AKTS) üst sınırına dahil edilir. Başka kurumdan ders almak isteyen öğrencinin kayıt ve benzeri süreçlerde o kurumun koşullarını da karşılaması gerekmektedir.",
+    "context_reference": "ESTÜ Yaz Okulu Uygulama Esasları, Maddeler 9 ve 16",
+    "question_type": "Multi-hop"
+  },
+  {
+    "question": "GNO'su 2,95 olan, tüm derslerini başarıyla tamamlamış ve disiplin cezası almamış bir öğrenci, aynı fakülte içinde başka bir bölüme geçmek istiyor. Kurum içi yatay geçiş başvurusu yapabilir mi? Yapamıyorsa kurumlararası yatay geçiş koşullarını sağlıyor mu?",
+    "ground_truth": "Kurum içi yatay geçiş için: Hayır, bu öğrenci kurum içi yatay geçiş başvurusu yapamaz. Yatay Geçiş Yönergesi'nin 8. maddesinin 1. fıkrası (b) bendi uyarınca kurum içi yatay geçiş için GNO'nun en az 3,00 olması zorunludur; öğrencinin GNO'su 2,95 olduğundan bu şartı karşılamamaktadır. Kurumlararası yatay geçiş için: Kurumlararası yatay geçişte ise Madde 9 (1b) uyarınca GNO'nun 100 üzerinden en az 76,66 (4'lük sistemde en az 3,00) olması gerekir. 2,95 GNO bu eşiğin de altında kaldığından öğrenci kurumlararası yatay geçiş için de başvuru yapamaz. Öğrenci, bir sonraki dönem GNO'sunu 3,00 veya üzerine çıkarabilirse koşulları yeniden değerlendirilebilir.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 8 (1b) ve Madde 9 (1b)",
+    "question_type": "Agentic"
+  },
+  {
+    "question": "Bilgisayar Mühendisliği öğrencisi Ali, 4. yarıyılı bitirmiş ve şu an 5. yarıyılda okumaktadır. Henüz hiç staj yapmamıştır. Staj başvurusu yapabilmek için en az hangi yarıyılı tamamlamış olması gerekmektedir?",
+    "ground_truth": "Mühendislik Fakültesi Staj Yönergesi'nin 10. maddesinin 2. fıkrası uyarınca öğrenci, IV. yarıyılın sonu itibarıyla staja başvurabilir. Yani staj başvurusu için en az 4. yarıyılı tamamlamış olmak gerekmektedir. Ali 4. yarıyılı bitirmiş ve 5. yarıyılda olduğundan staj başvurusu yapma hakkına sahiptir. Başvurusunu staj başlangıç tarihinden en az 15 gün önce Bölüm Staj Komisyonu'na yapması gerekmektedir.",
+    "context_reference": "ESTÜ Mühendislik Fakültesi Staj Yönergesi, Madde 10 (2)",
+    "question_type": "Agentic"
+  },
+  {
+    "question": "Erasmus Dil Sınavı puanı 58 olan (1. Aşama) bir öğrenci, 2. Aşamaya katılabilir mi? Bu öğrencinin sıralama puanına katkı sağlamak için ne yapması gerekir?",
+    "ground_truth": "Hayır, bu öğrenci 2. Aşamaya doğrudan giremez. Uluslararası Değişim Programları Yabancı Dil Sınavı Uygulama Usul ve Esasları'nın 6. maddesine göre 1. Aşamadan 100 üzerinden 60 puan ve üzeri alanlar 2. Aşamaya alınır; 58 puan bu eşiğin altında kalmaktadır. Ancak öğrenci, YDS, e-YDS, YÖKDİL veya e-YÖKDİL sınavlarından en az 60 puan ya da e-TEP sınavından en az 50 puan almışsa bu belgeyle 2. Aşamaya katılabilir. 2. Aşamaya katılamayan öğrencinin sıralama puanı hesaplanamaz; dolayısıyla Erasmus programına başvurmak için önce geçerli bir dil yeterliliği belgesi edinmesi gerekmektedir.",
+    "context_reference": "ESTÜ Uluslararası Değişim Programları Yabancı Dil Sınavı Uygulama Usul ve Esasları, Tablo 2",
+    "question_type": "Agentic"
+  },
+  {
+    "question": "Lisans diploması için 240 AKTS tamamlamış, GNO'su 2,00 olan ve hiçbir dersten FF, YZ, DZ harf notu almamış bir yatay geçişli öğrenci mezun olabilir mi?",
+    "ground_truth": "Evet, bu öğrenci mezun olabilir. Yatay Geçiş Yönergesi'nin 7. maddesinin 1. fıkrası (d) bendi uyarınca yatay geçişle gelen bir öğrencinin mezuniyeti için lisans programında en az 240 AKTS ders kredisi alması, herhangi bir dersten FF, YZ ve DZ son harf notunun olmaması ve GNO'sunun en az 2,00 olması gerekmektedir. Öğrenci bu üç koşulun tamamını karşılamaktadır: 240 AKTS tamamlanmış, GNO 2,00 şartı sağlanmış ve başarısızlık harf notu bulunmamaktadır. Diğer mezuniyet yükümlülüklerinin de (staj vb.) yerine getirilmiş olması kaydıyla mezuniyet hakkı doğmaktadır.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 7 (1d)",
+    "question_type": "Agentic"
+  },
+  {
+    "question": "ESTÜ'de 4'lük sistemde GNO'su 3,50 olan bir öğrencinin notu 100'lük sisteme nasıl dönüştürülür ve bu dönüşüm hangi belgeye dayanır?",
+    "ground_truth": "Kredili ve Mutlak Sistemdeki Not Karşılıklarına İlişkin Uygulama Esasları'nın 4. maddesi uyarınca öğrenci hangi sistemde öğrenim görmüş ise o sistemdeki not ortalaması esastır. Ancak mevzuatta sadece bir sisteme göre belirli bir not ortalaması barajı aranıyorsa ve öğrenci diğer sistemde öğrenim görmüşse genel not ortalaması Tablo 2-a veya 2-b'ye göre diğer sisteme dönüştürülür. 4'lük sistemden 100'lük sisteme dönüşüm Tablo 2-a'ya göre gerçekleştirilmektedir. 3,50 gibi spesifik değerlerin karşılığı tablodaki ilgili satırdan bulunmalıdır; ancak tablonun sayısal içeriği belgede görsel format nedeniyle tam olarak okunamadığından kesin karşılığı için belgenin aslına başvurulması tavsiye edilir.",
+    "context_reference": "ESTÜ Kredili ve Mutlak Sistemdeki Not Karşılıklarına İlişkin Uygulama Esasları, Madde 4 ve Tablo 2-a",
+    "question_type": "Agentic"
+  },
+  {
+    "question": "Bir öğrenci, yatay geçiş başvurusu kabul edilmesine rağmen eğitim-öğretim dönemi başlamadan önce bu haktan vazgeçerse ne olur? Bu öğrenci aynı dönemde başka bir yükseköğretim kurumuna yatay geçiş yapabilir mi?",
+    "ground_truth": "Yatay Geçiş Yönergesi'nin 7. maddesinin 1. fıkrası (f) bendi uyarınca ilgili yılda/dönemde yatay geçiş başvurusu kabul edilerek kayıt yaptıran ancak eğitim-öğretim dönemi başlamadan önce yatay geçiş hakkından vazgeçen öğrencilerin yatay geçiş işlemleri iptal edilir. Bu öğrenciler, yatay geçiş yapmış öğrenci olarak kabul edilmez ve yatay geçiş başvurusu yaptıkları yükseköğretim kurumuna geri dönerler. Ancak bu öğrenciler, yatay geçiş kaydını iptal ettirdikleri yılda/dönemde başka bir yükseköğretim kurumuna yatay geçiş hakkı elde etmeleri durumunda yatay geçiş yapabilirler.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 7 (1f)",
+    "question_type": "Multi-hop"
+  },
+  {
+    "question": "ESTÜ'de bölümler arasındaki ders transferlerinde not dönüşümü nasıl yapılır? Önceki kurumda DD notu olan dersler transfer edilebilir mi?",
+    "ground_truth": "Yatay Geçiş Yönergesi'nin 11. maddesinin 1. fıkrası (ş) bendi uyarınca öğrencinin önceki yükseköğretim kurumunda aldığı ve ESTÜ'deki not karşılıkları CC ve üstü ile YT harf notu olan dersleri transfer edilir. DD, DC ve CD harf notuna karşılık gelen derslerin intibakı ve transferi ise öğrencinin GNO'sunu 2,00'nin altına düşürmeyecek şekilde yapılır. FF, YZ ve DZ harf notuna karşılık gelen derslerin transferi yapılmaz. Bu kapsamda DD notu olan dersin transferi, GNO 2,00 sınırını düşürmeme koşuluna bağlı olup doğrudan red anlamına gelmez.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 11 (1ş)",
+    "question_type": "Multi-hop"
+  },
+  {
+    "question": "ESTÜ'nün hangi bitcoin borsasıyla anlaşmalı olduğunu öğrenebilir miyim?",
+    "ground_truth": "Bu sorunun yanıtı yüklenen ESTÜ yönetmelik ve yönerge belgelerinin kapsamı dışındadır. Söz konusu belgeler akademik mevzuatı düzenlemekte olup finansal kurumlar veya ticari anlaşmalar hakkında herhangi bir bilgi içermemektedir.",
+    "context_reference": "Kapsam dışı - belgeler arasında bu konuya ilişkin bilgi bulunmamaktadır.",
+    "question_type": "Out-of-Scope"
+  },
+  {
+    "question": "ESTÜ Akademik Asistanı bana ödev yazabilir mi?",
+    "ground_truth": "Bu soru, yüklenen ESTÜ yönetmelik ve yönerge belgelerinin kapsamı dışındadır. Akademik Asistan, ESTÜ'ye ait akademik mevzuat ve prosedürler hakkında bilgi vermek amacıyla tasarlanmıştır; ödev yazma veya akademik dürüstlük politikalarını ihlal eden faaliyetler için kullanılması mümkün değildir.",
+    "context_reference": "Kapsam dışı - belgeler arasında bu konuya ilişkin bilgi bulunmamaktadır.",
+    "question_type": "Out-of-Scope"
+  },
+  {
+    "question": "Yüz yüze sınava girmek zorunda kalmadan lisans diploması alabilir miyim?",
+    "ground_truth": "Bu sorunun yanıtı yüklenen belgeler kapsamında doğrudan yanıtlanamamaktadır. ESTÜ Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği, derslerin teorik, uygulama ve sınav bileşenlerini düzenlemekte olup belirli kısmi uzaktan öğretim imkânlarına atıfta bulunmaktadır. Ancak genel bir diploma programının tamamının yüz yüze sınav yapılmadan tamamlanıp tamamlanamayacağı sorusu, mevcut belgelerdeki kapsam dahilinde kesin bir yanıt almaya elverişli değildir. Bu konuda birim akademik danışmanlığına başvurulması önerilir.",
+    "context_reference": "Kapsam dışı veya yetersiz bilgi - yüklenen belgeler bu soruya doğrudan yanıt vermemektedir.",
+    "question_type": "Out-of-Scope"
+  },
+  {
+    "question": "Yurt dışında açık ve uzaktan eğitim programına kayıtlı bir öğrenci ESTÜ'ye yurt içi örgün öğretim programına yatay geçiş başvurusu yapabilir mi?",
+    "ground_truth": "Hayır. Yatay Geçiş Yönergesi'ne 10/03/2026 tarihli Senato kararıyla eklenen Madde 12 (3) uyarınca yurt dışında açık ve uzaktan eğitim gibi devam zorunluluğu bulunmayan öğretim programlarında öğrenimine devam eden öğrenciler yurt içindeki örgün öğretim programlarına yatay geçiş başvurusunda bulunamaz.",
+    "context_reference": "ESTÜ Önlisans Ve Lisans Programlarına Yatay Geçiş Yönergesi, Madde 12 (3) – Ek: Senato-10/03/2026",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Bir öğrencinin üçüncü derece yakınının vefat etmesi halinde mazeretli sayılacağı süre kaç gündür ve bu mazeret kapsamında hangi haklar kullanılabilir?",
+    "ground_truth": "Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar'ın 3. maddesi (c) fıkrası uyarınca öğrencinin alt ve üst soyu ile üçüncü dereceye kadar yakınlarının ölümü hâlinde, ölümü belgelendirmesi durumunda ölüm gününden itibaren bir hafta (7 gün) için mazeretli kayıt, mazeret sınavları ve laboratuvar dersi tekrarı haklarından yararlanabilir.",
+    "context_reference": "ESTÜ Haklı ve Geçerli Nedenlere İlişkin Usul ve Esaslar, Madde 3 (c)",
+    "question_type": "Simple"
+  },
+  {
+    "question": "Mühendislik Fakültesi'nde bir öğrenci, stajında başarısız bulunduğu karara karşı kaç iş günü içinde ve nereye itiraz etmelidir?",
+    "ground_truth": "Mühendislik Fakültesi Staj Yönergesi'nin 14. maddesinin 3. fıkrası uyarınca öğrenci, stajın değerlendirilmesine ilişkin karara karşı kararın ilan tarihini izleyen 5 (beş) iş günü içinde Dekanlığa yazılı olarak itirazda bulunabilir. İtiraz, Fakülte Staj Komisyonu tarafından değerlendirilir ve Yönetim Kurulu tarafından karara bağlanır.",
+    "context_reference": "ESTÜ Mühendislik Fakültesi Staj Yönergesi, Madde 14 (3)",
+    "question_type": "Simple"
+  }
+]

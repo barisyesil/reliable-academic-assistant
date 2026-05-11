@@ -1,6 +1,8 @@
 import os
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
+import faulthandler
+faulthandler.enable()
 
 _vector_store = None
 

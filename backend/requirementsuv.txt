@@ -1,5 +1,5 @@
 # Web Framework
-fastapi>=0.115.0
+fastapi
 uvicorn[standard]
 python-multipart
 
@@ -9,16 +9,23 @@ aiosqlite
 
 # Auth & Security
 python-jose[cryptography]
-passlib[bcrypt]==1.7.4
-bcrypt==3.2.2
+passlib[bcrypt]
+bcrypt>=4.0.1
 
-# LangChain & AI (Versiyon çakışmalarını önlemek için esnek bırakıldı)
-langchain
-langchain-core>=0.3.29
+# LangChain & AI (Modern LangChain stack)
+langchain>=0.3.0
+langchain-core>=0.3.0
 langchain-groq
 langchain-huggingface
 langchain-chroma
 langchain-community
+langgraph
+
+# Evaluation (Ragas testleri için eklendi)
+ragas
+datasets
+pandas
+openpyxl
 
 # Vector DB & Processing
 chromadb

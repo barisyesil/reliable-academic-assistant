@@ -35,3 +35,11 @@ build/
 # ========================
 .DS_Store
 Thumbs.db
+backend/data.zip
+backend/pytest.py
+backend/rag_retriever.py
+/backend/venv5
+/backend/venv_eval
+/.vscode
+.vscode/settings.json
+.vscode/settings.json
