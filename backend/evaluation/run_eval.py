@@ -29,8 +29,8 @@ from langchain_huggingface import HuggingFaceEmbeddings
 # CONFIG
 # ─────────────────────────────────────────────
 BACKEND_URL    = os.getenv("BACKEND_URL", "http://localhost:8000")
-EVAL_TOKEN     = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzZDliNWU3ZS05ZWQ3LTQwYWYtYjRlYy01Y2QyODcwNjlmZTAiLCJleHAiOjE3Nzg0ODc1ODEsInR5cGUiOiJhY2Nlc3MifQ.3mGKfBBrVCsSmFEp4C7U82ky_Ukz47K8okwZZwaiLjA"
-GROQ_API_KEY   = "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"
+EVAL_TOKEN     = "key2"
+GROQ_API_KEY   = "key"
 GROQ_MODEL     = os.getenv("GROQ_EVAL_MODEL", "meta-llama/llama-4-scout-17b-16e-instruct")
 EMBED_MODEL    = "BAAI/bge-m3"
 
