@@ -35,3 +35,10 @@ build/
 # ========================
 .DS_Store
 Thumbs.db
+/backend/evaluation
+/.vscode
+/backend/evaluation
+/backend/venv5
+/backend/venv_eval
+
+backend/db/processed_files.json

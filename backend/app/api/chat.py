@@ -54,7 +54,7 @@ async def chat_endpoint(
         select(Message)
         .where(Message.conversation_id == conv.id)
         .order_by(Message.created_at.desc())
-        .limit(6)
+        .limit(4)
     )
     raw_msgs = list(reversed(msgs_result.scalars().all()))
 

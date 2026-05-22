@@ -39,12 +39,16 @@ def build_agent(llm: ChatGroq, tools: list):
         tools=tools,          # LangGraph'ın execution yapabilmesi için
         prompt=SYSTEM_PROMPT  
     )
-
 def build_messages(query: str, history: list[tuple[str, str]]) -> list:
-    """Sohbet geçmişini ve yeni soruyu mesaj nesnelerine çevirir."""
+    """Sohbet geçmişinden son 2 çifti ve yeni soruyu mesaj nesnelerine çevirir."""
     messages = []
-    for user_msg, ai_msg in history:
+    
+    # history[-2:] ifadesi listenin son iki elemanını (çiftini) alır. 
+    # Eğer listede 2'den az eleman varsa listenin tamamını döndürür.
+    for user_msg, ai_msg in history[-2:]:
         messages.append(HumanMessage(content=user_msg))
         messages.append(AIMessage(content=ai_msg))
+        
+    # Mevcut soruyu en sona ekliyoruz
     messages.append(HumanMessage(content=query))
     return messages
